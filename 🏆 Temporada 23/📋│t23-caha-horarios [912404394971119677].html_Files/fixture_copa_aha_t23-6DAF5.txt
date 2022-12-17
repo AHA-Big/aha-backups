@@ -1,0 +1,40 @@
+### Fecha 1 ###
+__Grupo A__
+Juego Bonito Argentina vs. Tigres del Sur (tR@) #copa-partido1
+Sokker vs. Titanes del Haxball (@VL) #copa-partido2
+ 
+__Grupo B__
+SanBri Club vs. Leeds United (@EST) #copa-partido3
+Vikings Big vs. AC Milanesa (@LTA) #copa-partido4
+ 
+__Grupo C__
+Feyenoord vs. xGodesk (@TTU) #copa-partido5
+Infierno Rojo vs. La R Vivimo (@Hi) #copa-partido6
+
+
+### Fecha 2 ###
+__Grupo A__
+Titanes del Haxball vs. Juego Bonito Argentina (@) #copa-partido1
+Tigres del Sur vs. Sokker (@) #copa-partido2
+ 
+__Grupo B__
+AC Milanesa vs. SanBri Club (@) #copa-partido3
+Leeds United vs. Vikings Big (@) #copa-partido4
+ 
+__Grupo C__
+La R Vivimo vs. Feyenoord (@) #copa-partido5
+xGodesk vs. Infierno Rojo (@) #copa-partido6
+
+
+### Fecha 3 ###
+__Grupo A__
+Sokker vs. Juego Bonito Argentina (@) #copa-partido1
+Titanes del Haxball vs. Tigres del Sur (@) #copa-partido2
+ 
+__Grupo B__
+SanBri Club vs. Vikings Big (@) #copa-partido3
+AC Milanesa vs. Leeds United (@) #copa-partido4
+ 
+__Grupo C__
+Feyenoord vs. Infierno Rojo (@) #copa-partido5
+La R Vivimo vs. xGodesk (@) #copa-partido6
