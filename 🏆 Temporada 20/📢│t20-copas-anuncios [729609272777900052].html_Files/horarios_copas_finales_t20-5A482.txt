@@ -1,0 +1,100 @@
+Copa de Campeones
+
+__**Cuartos de Final - Ida - Lunes 6 de Julio**__
+**22:30** Cool Gamers vs. Ricardo Fort (@DH) #a-partido1
+**23:00** Hannover 96 vs. Haxbol Team (@IR) #a-partido2
+**22:30** Pearl Jam vs. Vikings Big (@JBA) #a-partido3
+**22:30** Históricos vs. La Tenés Adentro (@LVP) #a-partido4
+
+__**Cuartos de Final - Vuelta - Viernes 10 de Julio**__
+**22:30** Ricardo Fort vs. Cool Gamers (@Nice) #a-partido1
+**23:00** Haxbol Team vs. Hannover 96 (@SK) #a-partido2
+**22:30** Vikings Big vs. Pearl Jam (@TN) #a-partido3
+**22:30** La Tenés Adentro vs. Históricos (@TTU) #a-partido4
+
+
+**Puntos a destacar - Juego**
+* El partido de IDA finaliza a los 10 minutos, sin overtime.
+* En la VUELTA, en caso de empate en el resultado global, se sigue jugando en overtime. En caso de no ser posible jugar overtime, se reinicia el partido a un gol.
+* El equipo de la izquierda será el local y encargado de la creación de la sala.
+* Recomendable usar camisetas.
+
+**Puntos a destacar - Cambios de horario/día**
+* El cambio de día y horario de un partido tendrá que ser pactado entre capitanes y anunciado, con la confirmación de ambos, en #⏱│cambios-de-horario.
+* Los cambios de días pueden ser sólo hasta el día anterior a la próxima fase.
+* Podrán utilizar un :black_joker: comodín para solicitar el cambio de día sin confirmación del rival, también en #⏱│cambios-de-horario.
+
+**Puntos a destacar - Firmas y abritraje**
+* A partir de la segunda mitad se estará utilizando el nuevo **sistema AntiDU**. Para averiguar cómo firmar, dirigirse a #🔒│antidu.
+* Los equipos de la Copa AHA arbitrarán la Copa de Campeones y viceversa.
+* Los árbitros serán los jugadores o equipos que figuran entre paréntesis. Deberán verificar las firmas en el canal indicado junto a cada partido.
+
+------------------------------------
+
+Copa AHA
+
+**Fase de Grupos - Fecha 1 - Martes 7 de Julio**
+__Grupo A:__
+**23:30** Titanes del Haxball vs. Tiki Tiki United (@CG) #b-partido1
+**23:00** La Vela Puerca vs. Deportivo Haxball (@H96) #b-partido2
+Libre: Infierno Rojo
+__Grupo B:__
+**23:30** Juego Bonito Argentina vs. Sokker (@HT) #b-partido3
+**22:30** OGC Nice vs. Tottenham Hotspur Team (@Hi) #b-partido4
+Libre: Talento Natural
+
+**Fase de Grupos - Fecha 2 - Jueves 9 de Julio**
+__Grupo A:__
+**23:30** Infierno Rojo vs. Titanes del Haxball (@LTA) #b-partido1
+**23:00** Tiki Tiki United vs. La Vela Puerca (@PJ) #b-partido2
+Libre: Deportivo Haxball
+__Grupo B:__
+**23:15** Talento Natural vs. Juego Bonito Argentina (@RF) #b-partido3
+**22:30** Sokker vs. OGC Nice (@VB) #b-partido4
+Libre: Tottenham Hotspur Team
+
+**Fase de Grupos - Fecha 3 - Sábado 11 de Julio**
+__Grupo A:__
+**23:15** La Vela Puerca vs. Infierno Rojo (@CG) #b-partido1
+**23:00** Deportivo Haxball vs. Tiki Tiki United (@H96) #b-partido2
+Libre: Titanes del Haxball
+__Grupo B:__
+**22:30** OGC Nice vs. Talento Natural (@HT) #b-partido3
+**23:30** Tottenham Hotspur Team vs. Sokker (@Hi) #b-partido4
+Libre: Juego Bonito Argentina
+
+**Fase de Grupos - Fecha 4 - Lunes 13 de Julio**
+__Grupo A:__
+**22:30** Infierno Rojo vs. Deportivo Haxball (@LTA) #b-partido1
+**23:30** Titanes del Haxball vs. La Vela Puerca (@PJ) #b-partido2
+Libre: Tiki Tiki United
+__Grupo B:__
+**23:00** Talento Natural vs. Tottenham Hotspur Team (@RF) #b-partido3
+**22:30** Juego Bonito Argentina vs. OGC Nice (@VB) #b-partido4
+Libre: Sokker
+
+**Fase de Grupos - Fecha 5 - Jueves 16 de Julio**
+__Grupo A:__
+**23:15** Tiki Tiki United vs. Infierno Rojo (@) #b-partido1
+**23:00** Deportivo Haxball vs. Titanes del Haxball (@) #b-partido2
+Libre: La Vela Puerca
+__Grupo B:__
+**23:30** Sokker vs. Talento Natural (@) #b-partido3
+**23:15** Tottenham Hotspur Team vs. Juego Bonito Argentina (@) #b-partido4
+Libre: OGC Nice
+
+
+**Puntos a destacar - Juego**
+* El partido finaliza a los 10 minutos, sin overtime.
+* El equipo de la izquierda será el local y encargado de la creación de la sala.
+* Recomendable usar camisetas.
+
+**Puntos a destacar - Cambios de horario/día**
+* El cambio de día y horario de un partido tendrá que ser pactado entre capitanes y anunciado, con la confirmación de ambos, en #⏱│cambios-de-horario.
+* Los cambios de días pueden ser sólo hasta el día de la próxima fecha.
+* Podrán utilizar un :black_joker: comodín para solicitar el cambio de día sin confirmación del rival, también en #⏱│cambios-de-horario.
+
+**Puntos a destacar - Firmas y abritraje**
+* A partir de la segunda mitad se estará utilizando el nuevo **sistema AntiDU**. Para averiguar cómo firmar, dirigirse a #🔒│antidu.
+* Los equipos de la Copa AHA arbitrarán la Copa de Campeones y viceversa.
+* Los árbitros serán los jugadores o equipos que figuran entre paréntesis. Deberán verificar las firmas en el canal indicado junto a cada partido.
