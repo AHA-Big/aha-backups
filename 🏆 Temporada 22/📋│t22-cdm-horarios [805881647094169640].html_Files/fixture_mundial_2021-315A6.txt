@@ -1,0 +1,95 @@
+Fecha 1A
+Velez - Históricos
+Estudiantes - Good Lucky
+
+Fecha 2A
+Good Lucky - Velez
+Estudiantes - Históricos
+
+Fecha 3A
+Velez - Estudiantes
+Históricos - Good Lucky
+
+Fecha 1B
+Ricardo Fort - Infierno Rojo
+xGodesk - Tiki Tiki United
+
+Fecha 2B
+Tiki Tiki United - Ricardo Fort
+Infierno Rojo - xGodesk
+
+Fecha 3B
+Ricardo Fort - xGodesk
+Tiki Tiki United - Infierno Rojo
+
+Fecha 1C
+Natus Vincere - Schweiden Adlers
+Toco y Paso - Tigres del Sur
+
+Fecha 2C
+Tigres del Sur - Natus Vincere
+Schweiden Adlers - Toco y Paso
+
+Fecha 3C
+Natus Vincere - Toco y Paso
+Tigres del Sur - Schweiden Adlers
+
+Fecha 1D
+Hannover 96 - Atlético Mineiro
+New Galaxy - Feyenoord
+
+Fecha 2D
+Feyenoord - Hannover 96
+Atlético Mineiro - New Galaxy
+
+Fecha 3D
+Hannover 96 - New Galaxy
+Feyenoord - Atlético Mineiro
+
+Fecha 1E
+Red Panters - La Vela Puerca
+Racing - Vikings Big
+
+Fecha 2E
+Vikings Big - Red Panters
+La Vela Puerca - Racing
+
+Fecha 3E
+Red Panters - Racing
+Vikings Big - La Vela Puerca
+
+Fecha 1F
+tuRiver - Juego Bonito Argentina
+SanBri Club - Pearl Jam
+
+Fecha 2F
+Pearl Jam - tuRiver
+Juego Bonito Argentina - SanBri Club
+
+Fecha 3F
+tuRiver - SanBri Club
+Pearl Jam - Juego Bonito Argentina
+
+Fecha 1G
+La Tenés Adentro - Fnatic
+Titanes del Haxball - Sokker
+
+Fecha 2G
+Sokker - La Tenés Adentro
+Fnatic - Titanes del Haxball
+
+Fecha 3G
+La Tenés Adentro - Titanes del Haxball
+Sokker - Fnatic
+
+Fecha 1H
+Junín - Leeds United
+Libre: Deportivo Haxball
+
+Fecha 2H
+Deportivo Haxball - Junín
+Libre: Leeds United
+
+Fecha 3H
+Leeds United - Deportivo Haxball
+Libre: Junín
