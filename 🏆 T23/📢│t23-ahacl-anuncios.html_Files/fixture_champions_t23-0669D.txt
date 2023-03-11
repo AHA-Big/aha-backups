@@ -1,0 +1,118 @@
+GRUPO A
+
+Fecha 1
+Velez - Históricos
+National Basketball Association - tuRiver
+
+Fecha 2
+tuRiver - Velez
+Históricos - National Basketball Association
+
+Fecha 3
+Velez - National Basketball Association
+tuRiver - Históricos
+
+-----
+GRUPO B
+
+Fecha 1
+La Vela Puerca - Juego Bonito Argentina
+Vikings Big - Burkina Faso
+
+Fecha 2
+Burkina Faso - La Vela Puerca
+Juego Bonito Argentina - Vikings Big
+
+Fecha 3
+La Vela Puerca - Vikings Big
+Burkina Faso - Juego Bonito Argentina
+
+-----
+GRUPO C
+
+Fecha 1
+Nueva Chicago - Leeds United
+Natus Vincere - Titanes del Haxball
+
+Fecha 2
+Titanes del Haxball - Nueva Chicago
+Leeds United - Natus Vincere
+
+Fecha 3
+Nueva Chicago - Natus Vincere
+Titanes del Haxball - Leeds United
+
+-----
+GRUPO D
+
+Fecha 1
+Ricardo Fort - Samurai
+Red Panters - Sokker
+
+Fecha 2
+Sokker - Ricardo Fort
+Samurai - Red Panters
+
+Fecha 3
+Ricardo Fort - Red Panters
+Sokker - Samurai
+
+-----
+GRUPO E
+
+Fecha 1
+SanBri Club - Estudiantes
+Tiki Tiki United - Feyenoord
+
+Fecha 2
+Feyenoord - SanBri Club
+Estudiantes - Tiki Tiki United
+
+Fecha 3
+SanBri Club - Tiki Tiki United
+Feyenoord - Estudiantes
+
+-----
+GRUPO F
+
+Fecha 1
+No Compro - Racing
+Deportivo Haxball - xGodesk
+
+Fecha 2
+xGodesk - No Compro
+Racing - Deportivo Haxball
+
+Fecha 3
+No Compro - Deportivo Haxball
+xGodesk - Racing
+
+-----
+GRUPO G
+
+Fecha 1
+New Galaxy - Good Lucky
+Tigres del Sur - Claridad
+
+Fecha 2
+Claridad - Good Lucky
+Tigres del Sur - New Galaxy
+
+Fecha 3
+Good Lucky - Tigres del Sur
+New Galaxy - Claridad
+
+-----
+GRUPO H
+
+Fecha 1
+Atlético Mineiro - Bastards
+La Tenés Adentro - AC Milanesa
+
+Fecha 2
+AC Milanesa - Atlético Mineiro
+La Tenés Adentro - Bastards
+
+Fecha 3
+Atlético Mineiro - La Tenés Adentro
+Bastards - AC Milanesa

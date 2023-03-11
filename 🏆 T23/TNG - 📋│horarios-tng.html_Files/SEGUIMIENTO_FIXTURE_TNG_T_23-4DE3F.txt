@@ -1,0 +1,116 @@
+FECHA 1
+Inter Miami vs Carpinchos FC
+Cerezo Osaka vs Melbourne City
+La re Vivimos vs New York City
+National Basketball Association vs Instituto
+Burkina Faso H.C vs Toco y Me Voy
+Breaking Ass vs AFH FC
+Miami Heat vs Nacional
+
+FECHA 2
+Carpinchos FC vs Nacional
+AFH FC vs Miami Heat
+Toco y me Voy vs Breaking Heass
+Instituto vs Burkina Faso H.C
+New York City vs National Basketball Association
+Melbourne City vs La re Vivimos
+Inter Miami vs Cerezo Osaka
+
+FECHA 3
+Cerezo Osaka vs Carpinchos FC
+La re Vivimos vs Inter Miami
+National Basketball Association vs Melbourne City
+Burkina Faso H.C vs New York City
+Breaking Ass vs Instituto
+Miami Heat vs Toco y me Voy
+Nacional vs AFH FC
+
+FECHA 4
+Carpinchos FC vs AFH FC
+Toco y me Voy vs Nacional 
+Instituto vs Miami Heat 
+New York City vs Breaking Ass
+Melbourne City vs Burkina Faso H.C
+Inter Miami vs Nacional Basketball Association
+Cerezo Osaka vs La re Vivimos
+
+FECHA 5
+La re Vivimos vs Carpinchos FC
+National Basketball Association vs Cerezo Osaka
+Burkina Faso H.C vs Inter Miami
+Breaking Ass vs Melbourne City
+Miami Heat vs New York City
+Nacional vs Instituto
+AFH FC vs Toco y Me Voy
+
+FECHA 6
+Carpinchos FC vs Toco y Me Voy
+Instituto vs AFH FC
+New York City vs Nacional
+Melbourne City vs Miami Heat
+Inter Miami vs Breaking Ass
+Cerezo Osaka vs Burkina Faso H.C
+La re Vivimos vs National Basketball Association
+
+FECHA 7
+National Basketball Association vs Carpinchos FC
+Burkina Faso HC vs La re Vivimos
+Breaking Ass vs Cerezo Osaka 
+Miami Heat vs Inter Miami
+Nacional vs Melbourne City
+AFH FC vs New York City
+Toco y Me Voy vs Instituto
+
+FECHA 8
+Carpinchos FC vs Instituo
+New York City vs Toco y Me Voy
+Melbourne City vs AFH FC
+Inter Miami vs Nacional
+Cerezo Osaka vs Miami Heat
+La re Vivimos vs Breaking Ass
+National Basketball Association vs Burkina Faso H.C
+
+FECHA 9
+Burkina Faso H.C vs Carpinchos FC
+Breaking Ass vs National Basketball Association
+Miami Heat vs La re Vivimos
+Nacional vs Cerezo Osaka
+AFH FC vs Inter Miami
+Toco y Me Voy vs Melbourne City 
+Instituto vs New York City
+
+FECHA 10
+Carpinchos FC vs New York City
+Melbourne City vs Instituto
+Inter Miami vs Toco y Me Voy
+Cerezo Osaka vs AFH FC
+La re Vivimos vs Nacional
+National Basketball Association vs Miami Heat
+Burkina Faso H.C vs Breaking Ass
+
+FECHA 11
+Breaking Ass vs Carpinchos FC
+Miami Heat vs Burkina Faso H.C
+Nacional vs National Basketball Association
+AFH FC vs La re Vivimos
+Toco y Me Voy vs Cerezo Osaka
+Instituto vs Inter Miami
+New York City vs Melbourne City
+
+FECHA 12
+Carpinchos FC vs Melbourne City
+Inter Miami vs New York City
+Cerezo Osaka vs Instituto
+La re Vivimos vs Toco y Me Voy
+National Basketball Association vs AFH FC
+Burkina Faso H.C vs Nacional
+Breaking Ass vs Miami Heat
+
+FECHA 13
+Miami Heat vs Carpinchos FC
+Nacional vs Breaking Ass
+AFH FC vs Burkina Faso H.C
+Toco y Me Voy vs National Basketball Association
+Instituto vs La re Vivimos
+New York City vs Cerezo Osaka
+Melbourne City vs Inter Miami

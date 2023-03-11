@@ -1,0 +1,41 @@
+#Grupo A
+Fecha 1
+Good Lucky - New Galaxy
+Vikings Big - tuRiver
+
+Fecha 2
+Natus Vincere - Good Lucky
+New Galaxy - Vikings Big
+
+Fecha 3
+Vikings Big - Natus Vincere
+tuRiver - New Galaxy
+
+Fecha 4
+Natus Vincere - tuRiver
+Good Lucky - Vikings Big
+
+Fecha 5
+New Galaxy - Natus Vincere
+tuRiver - Good Lucky 
+
+#Grupo B
+Fecha 1
+Sokker - Tigres del Sur
+Atlético Mineiro - xGodesk
+
+Fecha 2
+Titanes del Haxball - Sokker
+Tigres del Sur - Atlético Mineiro
+
+Fecha 3
+Atlético Mineiro - Titanes del Haxball
+xGodesk - Tigres del Sur
+
+Fecha 4
+Titanes del Haxball - xGodesk
+Sokker - Atlético Mineiro
+
+Fecha 5
+Tigres del Sur - Titanes del Haxball
+xGodesk - Sokker
