@@ -1,0 +1,1688 @@
+<!DOCTYPE html><html lang=en><head><title>AHA - Asociación de HaxBall Argentina - 📝│informes-etapa-1</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("../assets_2/ggsans-normal-400-1456D.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-500-89CE5.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-600-C1EA8.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-700-1949A.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-800-58487.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("../assets_2/ggsans-italic-400-E988B.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-500-0777F.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-600-CB411.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-700-891AC.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-800-D36B0.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=../assets_2/solarized-dark.min-BA98F.css><script src=../assets_2/highlight.min-D8D27.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=../assets_2/lottie.min-99657.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=../assets_2/a_64ac57e8378133f8efed3f6b9e88739b-D5E37.gif alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>AHA - Asociación de HaxBall Argentina</div><div class=preamble__entry>❌🆕 Canales Viejos / 📝│informes-etapa-1</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1089732047045660743 class=chatlog__message-container data-message-id=1089732047045660743><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/01fbc0ea9c8e58e8e1d045d75fa2648b-C4DD0.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=ross36 data-user-id=351506922161176577>Яoss</span> <span class=chatlog__timestamp title="domingo, 26 de marzo de 2023 23:06"><a href=#chatlog__message-container-1089732047045660743>26/03/2023 23:06</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Fecha 1 - Zona A</strong>:
+
+FNC 1-1 tA 
+
+Goles: alB (FNC) - Martyn (tA)
+Asis: ark (FNC)
+
+Figura: Martyn (tA)
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=8a901a4477df87978e7e24ae26039ba4">https://thehax.pl/forum/powtorki.php?nagranie=8a901a4477df87978e7e24ae26039ba4</a></span> <span class=chatlog__edited-timestamp title="lunes, 27 de marzo de 2023 0:27">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=8a901a4477df87978e7e24ae26039ba4"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div><div class=chatlog__reactions><div class=chatlog__reaction title=thumbsup><img class="chatlog__emoji chatlog__emoji--small" alt=👍 src=../assets_2/1f44d-27259.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1089735469299937301 class=chatlog__message-container data-message-id=1089735469299937301><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="domingo, 26 de marzo de 2023 23:19"><a href=#chatlog__message-container-1089735469299937301>26/03/2023 23:19</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Fecha 1 - Zona B</strong>
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 7 - 2 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: THI - Coco - SHAKA 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png">: 30h - gp - fz (Lanzini)
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> Coco x4 ; THI x2 ; SHAKA 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> Lanzini ; gp 
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> SHAKA x2 ; Coco ; THI 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> gp 
+
+<strong>MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">  <strong>Coco</strong>
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=6f30d9549eb4c6d5507403b363fa6a79">https://thehax.pl/forum/powtorki.php?nagranie=6f30d9549eb4c6d5507403b363fa6a79</a></span> <span class=chatlog__edited-timestamp title="lunes, 27 de marzo de 2023 21:38">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=6f30d9549eb4c6d5507403b363fa6a79"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1089739852905451580 class=chatlog__message-container data-message-id=1089739852905451580><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/049896c8392f556499def48cfadc42a0-47A3C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sabotash_ data-user-id=875335365127450674>SABOTASH</span> <span class=chatlog__timestamp title="domingo, 26 de marzo de 2023 23:37"><a href=#chatlog__message-container-1089739852905451580>26/03/2023 23:37</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Fecha 1 - Zona A</strong></span> <span class=chatlog__edited-timestamp title="domingo, 26 de marzo de 2023 23:41">(edited)</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=question><img class="chatlog__emoji chatlog__emoji--small" alt=❓ src=../assets_2/2753-7C696.svg loading=lazy> <span class=chatlog__reaction-count>3</span></div></div></div></div></div><div id=chatlog__message-container-1089740073014153246 class=chatlog__message-container data-message-id=1089740073014153246><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="domingo, 26 de marzo de 2023 23:37">23:37</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> 3- 0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png">  (DF)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1089740513206349975 class=chatlog__message-container data-message-id=1089740513206349975><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,57,66) title=zequeira data-user-id=417867043119824927>[DR] duki</span> <span class=chatlog__timestamp title="domingo, 26 de marzo de 2023 23:39"><a href=#chatlog__message-container-1089740513206349975>26/03/2023 23:39</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> 0 - 5 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 
+Goles Nordic x3 - Tara x2
+Asis Tara x2  - duki x2
+Figura Staff
+V&#237;deo <a href="https://thehax.pl/forum/powtorki.php?nagranie=91fe332289e7697d65d23f7184b87c7a">https://thehax.pl/forum/powtorki.php?nagranie=91fe332289e7697d65d23f7184b87c7a</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=91fe332289e7697d65d23f7184b87c7a"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1089745487701233764 class=chatlog__message-container data-message-id=1089745487701233764><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/83572ab2ff2edc4608dd5c26aa15d4fd-E7FB0.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(87,58,3) title=sunnn2948 data-user-id=314841444571414528>[CAL] Sakuraton</span> <span class=chatlog__timestamp title="domingo, 26 de marzo de 2023 23:59"><a href=#chatlog__message-container-1089745487701233764>26/03/2023 23:59</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Fecha 1 - Zona B
+
+ <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="BBC"
+    title="BBC"
+    src="../assets_2/1046193604290428959-1BEFC.png"> 1 - 1 ⭐ boys
+
+BBC:
+Lazan - Julian (x1)  - Ekz
+
+Starboys: lhezbest - paco amoroso - tuq (x1)
+
+video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=5c446d53735e1ee8d00232d9d823c0aa">https://thehax.pl/forum/powtorki.php?nagranie=5c446d53735e1ee8d00232d9d823c0aa</a></span> <span class=chatlog__edited-timestamp title="lunes, 27 de marzo de 2023 0:00">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=5c446d53735e1ee8d00232d9d823c0aa"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1089746536956711014 class=chatlog__message-container data-message-id=1089746536956711014><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 0:03"><a href=#chatlog__message-container-1089746536956711014>27/03/2023 0:03</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Fecha 1 - Zona B</strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> 6 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png">: Infinity - Xen&#243;n - Ronal 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png">: opsa - eleze - botita
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> Ronal x3 ; Infinity ; eleze e/c x2 (hay uno que va directo para PLANETAHAX)
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> eleze (lindo gol tmb)
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> Xen&#243;n x3 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> 
+
+<strong>MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> <strong>Xen&#243;n</strong>
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=9c020c7e478bf5e0f0798b853568555a">https://thehax.pl/forum/powtorki.php?nagranie=9c020c7e478bf5e0f0798b853568555a</a></span> <span class=chatlog__edited-timestamp title="lunes, 27 de marzo de 2023 0:56">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=9c020c7e478bf5e0f0798b853568555a"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090002259749904406 class=chatlog__message-container data-message-id=1090002259749904406><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0370765b2d26b0476e087c166fa3fc88-411E9.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/01fbc0ea9c8e58e8e1d045d75fa2648b-C4DD0.png alt=Avatar loading=lazy><div class=chatlog__reply-author title=ross36>Яoss</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1089732047045660743')"> <strong>Fecha 1 - Zona A</strong>:
+
+FNC 1-1 tA 
+
+Goles: alB (FNC) - Martyn (tA)
+Asis: ark (FNC)
+
+Figura: Martyn (tA)
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=8a901a4477df87978e7e24ae26039ba4">https://thehax.pl/forum/powtorki.php?nagranie=8a901a4477df87978e7e24ae26039ba4</a> </span> <span class=chatlog__reply-edited-timestamp title="lunes, 27 de marzo de 2023 0:27">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=tomy_camino data-user-id=784198529324154921>[tR] TMS</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 16:59"><a href=#chatlog__message-container-1090002259749904406>27/03/2023 16:59</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="color: rgb(231, 43, 43); background-color: rgba(231, 43, 43, 0.1);">@&#128081; Administrador</span> <span class="chatlog__markdown-mention" style="">@deleted-role</span> elijan la figura ustedes que cualq cosa esa figura</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=YE><img class="chatlog__emoji chatlog__emoji--small" alt=YE src=../assets_2/975030775374303242-0EB1A.png loading=lazy> <span class=chatlog__reaction-count>2</span></div><div class=chatlog__reaction title=sob><img class="chatlog__emoji chatlog__emoji--small" alt=😭 src=../assets_2/1f62d-02603.svg loading=lazy> <span class=chatlog__reaction-count>4</span></div><div class=chatlog__reaction title=ghost><img class="chatlog__emoji chatlog__emoji--small" alt=👻 src=../assets_2/1f47b-65359.svg loading=lazy> <span class=chatlog__reaction-count>4</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090010074065424484 class=chatlog__message-container data-message-id=1090010074065424484><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(238,57,66) title=zequeira>[DR] duki</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1089740513206349975')"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> 0 - 5 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 
+Goles Nordic x3 - Tara x2
+Asis Tara x2  - duki x2
+Figura Staff
+V&#237;deo <a href="https://thehax.pl/forum/powtorki.php?nagranie=91fe332289e7697d65d23f7184b87c7a">https://thehax.pl/forum/powtorki.php?nagranie=91fe332289e7697d65d23f7184b87c7a</a> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 17:30"><a href=#chatlog__message-container-1090010074065424484>27/03/2023 17:30</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura duki</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090010157720805438 class=chatlog__message-container data-message-id=1090010157720805438><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(117,174,224) title=.coco18>[NG/StP/IH] Coco</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1089735469299937301')"> <strong>Fecha 1 - Zona B</strong>
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 7 - 2 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: THI - Coco - SHAKA 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png">: 30h - gp - fz (Lanzini)
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> Coco x4 ; THI x2 ; SHAKA 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> Lanzini ; gp 
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> SHAKA x2 ; Coco ; THI 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> gp 
+
+<strong>MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">  <strong>Coco</strong>
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=6f30d9549eb4c6d5507403b363fa6a79">https://thehax.pl/forum/powtorki.php?nagranie=6f30d9549eb4c6d5507403b363fa6a79</a> </span> <span class=chatlog__reply-edited-timestamp title="lunes, 27 de marzo de 2023 21:38">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 17:31"><a href=#chatlog__message-container-1090010157720805438>27/03/2023 17:31</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Coco</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090083162635386921 class=chatlog__message-container data-message-id=1090083162635386921><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,57,66) title=zequeira data-user-id=417867043119824927>[DR] duki</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 22:21"><a href=#chatlog__message-container-1090083162635386921>27/03/2023 22:21</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 4-0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FNC"
+    title="FNC"
+    src="../assets_2/1087935406064013343-C876D.png">
+Goles: Nordic -  Tara x3
+Asis: Nordic x3 
+Figura: Staff
+V&#237;deo: <a href="https://thehax.pl/forum/powtorki.php?nagranie=64763b2d55af6cb94edaa0e43befeacb">https://thehax.pl/forum/powtorki.php?nagranie=64763b2d55af6cb94edaa0e43befeacb</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=64763b2d55af6cb94edaa0e43befeacb"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090084360545390602 class=chatlog__message-container data-message-id=1090084360545390602><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 22:26"><a href=#chatlog__message-container-1090084360545390602>27/03/2023 22:26</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura tara</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090094983144558692 class=chatlog__message-container data-message-id=1090094983144558692><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/06a85f4d85a08298f5cbdc66fcdb0d41-13DC5.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(194,124,14) title=pichon10 data-user-id=411977094424428555>Pichon</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 23:08"><a href=#chatlog__message-container-1090094983144558692>27/03/2023 23:08</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png"> SK 3 - 1 SF <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png">
+
+Goles SK:  Pichon x1, Javo x1, mnqq E/C
+Asis SK: mata x1
+Goles SF: tano
+Asis SF: mnq
+
+Figura Staff
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=60ccfb76994c9d2074992e7c35ea0d58">https://thehax.pl/forum/powtorki.php?nagranie=60ccfb76994c9d2074992e7c35ea0d58</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=60ccfb76994c9d2074992e7c35ea0d58"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090101382415143013 class=chatlog__message-container data-message-id=1090101382415143013><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/06a85f4d85a08298f5cbdc66fcdb0d41-13DC5.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(194,124,14) title=pichon10 data-user-id=411977094424428555>Pichon</span> <span class=chatlog__timestamp title="lunes, 27 de marzo de 2023 23:33"><a href=#chatlog__message-container-1090101382415143013>27/03/2023 23:33</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="tA"
+    title="tA"
+    src="../assets_2/1086184206415167579-69D3D.png"> tA 3 - 4 SK <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png">
+
+Goles SK: vichinn x4
+Asis SK:  Javo x2
+
+Goles tA: Ross x1, Martyn x1, goy x1
+Asis tA: goy x1
+
+Figura Staff
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=741c45c0d751880437b0640f8fae8690">https://thehax.pl/forum/powtorki.php?nagranie=741c45c0d751880437b0640f8fae8690</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=741c45c0d751880437b0640f8fae8690"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090128466562777129 class=chatlog__message-container data-message-id=1090128466562777129><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/4-4551A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=frank11893 data-user-id=389990539388518400>[EFC] Frank</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 1:21"><a href=#chatlog__message-container-1090128466562777129>28/03/2023 1:21</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>AVL 6 - 1 KAW 
+Goles AVL : Frank x 4 - X2 lince
+Asis AVL: Lince x3 frank x2
+Goles KAW: dp
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=51f8b6ba5717c7edf7683d398cefb677">https://thehax.pl/forum/powtorki.php?nagranie=51f8b6ba5717c7edf7683d398cefb677</a>
+
+Figura:</span> <span class=chatlog__edited-timestamp title="martes, 28 de marzo de 2023 22:54">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=51f8b6ba5717c7edf7683d398cefb677"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090158184150347798 class=chatlog__message-container data-message-id=1090158184150347798><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 3:19"><a href=#chatlog__message-container-1090158184150347798>28/03/2023 3:19</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>faltan informes ZONA A
+WOL v SF - Fecha 2 <span class="chatlog__markdown-mention" title="_naguto">@[ATS] &#241;aguto</span> <span class="chatlog__markdown-mention" title="fachy">@Fachy</span> 
+NTBR v EFC - Fecha 2 <span class="chatlog__markdown-mention" title="nacho0912">@[NG] Tractor</span> <span class="chatlog__markdown-mention" title="felo32">@[EFC] Doomposter</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090172497195962438 class=chatlog__message-container data-message-id=1090172497195962438><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/e01d3a86d9720c3c19c3af30e80fa1ab-2A928.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(117,174,224) title=.coco18>[NG/StP/IH] Coco</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090158184150347798')"> faltan informes ZONA A
+WOL v SF - Fecha 2 <span class="chatlog__markdown-mention" title="_naguto">@[ATS] &#241;aguto</span> <span class="chatlog__markdown-mention" title="fachy">@Fachy</span> 
+NTBR v EFC - Fecha 2 <span class="chatlog__markdown-mention" title="nacho0912">@[NG] Tractor</span> <span class="chatlog__markdown-mention" title="felo32">@[EFC] Doomposter</span> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(96,125,139) title=nacho0912 data-user-id=330935098264387585>[NG] Tractor</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 4:16"><a href=#chatlog__message-container-1090172497195962438>28/03/2023 4:16</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>doomposter dijo q lo subia</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090213764349042811 class=chatlog__message-container data-message-id=1090213764349042811><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/8f1f60a62fb1e598f440f298f5b96690-E4843.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(218,109,19) title=felo32 data-user-id=658682970990968844>[EFC] Doomposter</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 7:00"><a href=#chatlog__message-container-1090213764349042811>28/03/2023 7:00</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>EFC 0-5 NTBR
+
+goles: M&#225;gico x4. jere/c
+asistencias:  Cervi x3
+valla: tractor
+Figura: staff
+incidencias: buena actuaci&#243;n de jere <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🤣"
+    title="rofl"
+    src="../assets_2/1f923-5854E.svg">
+video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=7663beeba8fe4c10dfe528033fc66da2">https://thehax.pl/forum/powtorki.php?nagranie=7663beeba8fe4c10dfe528033fc66da2</a></span> <span class=chatlog__edited-timestamp title="miércoles, 29 de marzo de 2023 20:48">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=7663beeba8fe4c10dfe528033fc66da2"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090412841686806539 class=chatlog__message-container data-message-id=1090412841686806539><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/4-4551A.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=frank11893>[EFC] Frank</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090128466562777129')"> AVL 6 - 1 KAW 
+Goles AVL : Frank x 4 - X2 lince
+Asis AVL: Lince x3 frank x2
+Goles KAW: dp
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=51f8b6ba5717c7edf7683d398cefb677">https://thehax.pl/forum/powtorki.php?nagranie=51f8b6ba5717c7edf7683d398cefb677</a>
+
+Figura: </span> <span class=chatlog__reply-edited-timestamp title="martes, 28 de marzo de 2023 22:54">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 20:11"><a href=#chatlog__message-container-1090412841686806539>28/03/2023 20:11</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Cuando puedan suban el partido. Gracias</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090421727546318969 class=chatlog__message-container data-message-id=1090421727546318969><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/78ee7e677f916e202878f7b5e1217d74-4C5E4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(128,128,128) title=lince._ data-user-id=284426281674735616>[URSS] Lince</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 20:46"><a href=#chatlog__message-container-1090421727546318969>28/03/2023 20:46</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>medio down mi captain</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090433034647511190 class=chatlog__message-container data-message-id=1090433034647511190><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(117,174,224) title=.coco18>[NG/StP/IH] Coco</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090158184150347798')"> faltan informes ZONA A
+WOL v SF - Fecha 2 <span class="chatlog__markdown-mention" title="_naguto">@[ATS] &#241;aguto</span> <span class="chatlog__markdown-mention" title="fachy">@Fachy</span> 
+NTBR v EFC - Fecha 2 <span class="chatlog__markdown-mention" title="nacho0912">@[NG] Tractor</span> <span class="chatlog__markdown-mention" title="felo32">@[EFC] Doomposter</span> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 21:31"><a href=#chatlog__message-container-1090433034647511190>28/03/2023 21:31</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>tiramos antidf</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090453317395677325 class=chatlog__message-container data-message-id=1090453317395677325><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/4-4551A.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=frank11893>[EFC] Frank</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090128466562777129')"> AVL 6 - 1 KAW 
+Goles AVL : Frank x 4 - X2 lince
+Asis AVL: Lince x3 frank x2
+Goles KAW: dp
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=51f8b6ba5717c7edf7683d398cefb677">https://thehax.pl/forum/powtorki.php?nagranie=51f8b6ba5717c7edf7683d398cefb677</a>
+
+Figura: </span> <span class=chatlog__reply-edited-timestamp title="martes, 28 de marzo de 2023 22:54">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 22:52"><a href=#chatlog__message-container-1090453317395677325>28/03/2023 22:52</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Subiste un partido de rs</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=rofl><img class="chatlog__emoji chatlog__emoji--small" alt=🤣 src=../assets_2/1f923-5854E.svg loading=lazy> <span class=chatlog__reaction-count>3</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090453614906060871 class=chatlog__message-container data-message-id=1090453614906060871><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 22:53"><a href=#chatlog__message-container-1090453614906060871>28/03/2023 22:53</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>tremendo los pibes</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=wheelchair><img class="chatlog__emoji chatlog__emoji--small" alt=♿ src=../assets_2/267f-0A53E.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div><div class=chatlog__reaction title=baby><img class="chatlog__emoji chatlog__emoji--small" alt=👶 src=../assets_2/1f476-6C44A.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090453901695795271 class=chatlog__message-container data-message-id=1090453901695795271><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/4-4551A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(231,43,43) title=pacar22>[CAL] Morata</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090453317395677325')"> Subiste un partido de rs </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=frank11893 data-user-id=389990539388518400>[EFC] Frank</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 22:54"><a href=#chatlog__message-container-1090453901695795271>28/03/2023 22:54</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>ah&#237; edit&#233; se&#241;or</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=white_check_mark><img class="chatlog__emoji chatlog__emoji--small" alt=✅ src=../assets_2/2705-0589F.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090456935909826590 class=chatlog__message-container data-message-id=1090456935909826590><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/4-4551A.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=frank11893>[EFC] Frank</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090453901695795271')"> ah&#237; edit&#233; se&#241;or </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 23:06"><a href=#chatlog__message-container-1090456935909826590>28/03/2023 23:06</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura: Frank</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090462955973378061 class=chatlog__message-container data-message-id=1090462955973378061><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/3-FB033.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title="Deleted User" data-user-id=456226577798135808>Deleted User</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 23:30"><a href=#chatlog__message-container-1090462955973378061>28/03/2023 23:30</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> 5-0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png">
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> 30h - Lanzini - fz
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> lhezbest - paco amoroso - erikk
+Goles: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> paco amoroso x4 - erikk
+Asis: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> erikk x3  - paco amoroso 
+Figura Staff (creo q es obvio q fue paqui igual, no se como funciona esto jaja)
+V&#237;deo <a href="https://thehax.pl/forum/powtorki.php?nagranie=be6a4761981471f44169db9c6d09e8db">https://thehax.pl/forum/powtorki.php?nagranie=be6a4761981471f44169db9c6d09e8db</a></span> <span class=chatlog__edited-timestamp title="martes, 28 de marzo de 2023 23:31">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=be6a4761981471f44169db9c6d09e8db"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090463945732653068 class=chatlog__message-container data-message-id=1090463945732653068><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="martes, 28 de marzo de 2023 23:34"><a href=#chatlog__message-container-1090463945732653068>28/03/2023 23:34</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura paco</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090471801995407490 class=chatlog__message-container data-message-id=1090471801995407490><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/83572ab2ff2edc4608dd5c26aa15d4fd-E7FB0.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(87,58,3) title=sunnn2948 data-user-id=314841444571414528>[CAL] Sakuraton</span> <span class=chatlog__timestamp title="miércoles, 29 de marzo de 2023 0:05"><a href=#chatlog__message-container-1090471801995407490>29/03/2023 0:05</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Torneo transicion Fecha 2 - ZONA B
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AVL"
+    title="AVL"
+    src="../assets_2/1046191407897006130-72D95.png"> 0 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="BBC"
+    title="BBC"
+    src="../assets_2/1046193604290428959-1BEFC.png"> 
+
+BBC:
+
+Sakuraton - Julian - Guille (1G)
+
+AVL: 
+
+Savio - Frank - Lince
+
+Video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=02e6257f6ef0161aa4313090143601bd">https://thehax.pl/forum/powtorki.php?nagranie=02e6257f6ef0161aa4313090143601bd</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=02e6257f6ef0161aa4313090143601bd"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090780547640459284 class=chatlog__message-container data-message-id=1090780547640459284><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/8f1f60a62fb1e598f440f298f5b96690-E4843.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(218,109,19) title=felo32>[EFC] Doomposter</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090213764349042811')"> EFC 0-5 NTBR
+
+goles: M&#225;gico x4. jere/c
+asistencias:  Cervi x3
+valla: tractor
+Figura: staff
+incidencias: buena actuaci&#243;n de jere <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🤣"
+    title="rofl"
+    src="../assets_2/1f923-5854E.svg">
+video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=7663beeba8fe4c10dfe528033fc66da2">https://thehax.pl/forum/powtorki.php?nagranie=7663beeba8fe4c10dfe528033fc66da2</a> </span> <span class=chatlog__reply-edited-timestamp title="miércoles, 29 de marzo de 2023 20:48">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="miércoles, 29 de marzo de 2023 20:32"><a href=#chatlog__message-container-1090780547640459284>29/03/2023 20:32</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Necesito ese informe</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=thumbsup><img class="chatlog__emoji chatlog__emoji--small" alt=👍 src=../assets_2/1f44d-27259.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090784187558150164 class=chatlog__message-container data-message-id=1090784187558150164><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/8f1f60a62fb1e598f440f298f5b96690-E4843.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(3,107,208) title=fachy>Fachy</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090780547640459284')"> Necesito ese informe </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(218,109,19) title=felo32 data-user-id=658682970990968844>[EFC] Doomposter</span> <span class=chatlog__timestamp title="miércoles, 29 de marzo de 2023 20:46"><a href=#chatlog__message-container-1090784187558150164>29/03/2023 20:46</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>listo</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=muscle_tone2><img class="chatlog__emoji chatlog__emoji--small" alt=💪🏼 src=../assets_2/1f4aa-1f3fc-1669B.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090785310163619880 class=chatlog__message-container data-message-id=1090785310163619880><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/fd3b3cf51b1aeffd51d0af3488da41a9-07C07.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(96,125,139) title=xenonxn data-user-id=327878246731481098>[GOD] Kagami</span> <span class=chatlog__timestamp title="miércoles, 29 de marzo de 2023 20:51"><a href=#chatlog__message-container-1090785310163619880>29/03/2023 20:51</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png"> 0 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> 
+Gol: Cone
+Asis: Xen&#243;n 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png"> 
+Gol: - 
+Asis: - 
+
+Valla (no s&#233; si se siguen contando): Ronal EST
+
+Figura: Decide el staff 
+
+Video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=60855dd566e1340b37c7b6afc04f0cfd">https://thehax.pl/forum/powtorki.php?nagranie=60855dd566e1340b37c7b6afc04f0cfd</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=60855dd566e1340b37c7b6afc04f0cfd"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090811200129994815 class=chatlog__message-container data-message-id=1090811200129994815><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7c9c769ba384167568e41cda18be5091-DBCAD.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=wolves_fan data-user-id=773035869900636172>Rúben Neves</span> <span class=chatlog__timestamp title="miércoles, 29 de marzo de 2023 22:34"><a href=#chatlog__message-container-1090811200129994815>29/03/2023 22:34</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Fecha 3 - Zona A</strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> 2-0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> Bastiuu - Sabo - Excessive
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> Mhkitaryan - Jere - Doomposter
+
+Goles <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> Excessive x1, Sabo x1
+Asistencias <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> N/A
+
+Goles <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> N/A
+Asistencias <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> N/A
+
+Figura: Excessive <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"></span></div><div class=chatlog__attachment><div class=chatlog__attachment-generic><svg class=chatlog__attachment-generic-icon><use href=#attachment-icon /></svg><div class=chatlog__attachment-generic-name><a href=../assets_2/HBReplay-2023-03-29-22h28m-52222.hbr2> HBReplay-2023-03-29-22h28m.hbr2 </a></div><div class=chatlog__attachment-generic-size>52.47 KB</div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090822520925601852 class=chatlog__message-container data-message-id=1090822520925601852><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/dc07744fd7c2e3c71802b8f4567e33bc-A24AE.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(32,102,148) title=_naguto data-user-id=941734570506731591>[ATS] ñaguto</span> <span class=chatlog__timestamp title="miércoles, 29 de marzo de 2023 23:19"><a href=#chatlog__message-container-1090822520925601852>29/03/2023 23:19</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> 1-3 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> bastiuu-sabo-exss
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> solari-centu-manq
+
+goles: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> excessive x1
+asistencias; <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> n/a
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> goles: centu x3
+asistencias; <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> asistencias; manqui x1, tano x2</span> <span class=chatlog__edited-timestamp title="miércoles, 29 de marzo de 2023 23:19">(edited)</span></div><div class=chatlog__attachment><a href=../assets_2/1046191428537159750-2EB12.png> <img class=chatlog__attachment-media src=../assets_2/1046191428537159750-2EB12.png alt="Image attachment" title="Image: 1046191428537159750.png (4.69 KB)" loading=lazy> </a></div><div class=chatlog__attachment><div class=chatlog__attachment-generic><svg class=chatlog__attachment-generic-icon><use href=#attachment-icon /></svg><div class=chatlog__attachment-generic-name><a href=../assets_2/HBReplay-2023-03-29-23h03m-B1855.hbr2> HBReplay-2023-03-29-23h03m.hbr2 </a></div><div class=chatlog__attachment-generic-size>49.29 KB</div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1090867958986834020 class=chatlog__message-container data-message-id=1090867958986834020><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 2:19"><a href=#chatlog__message-container-1090867958986834020>30/03/2023 2:19</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Fecha 2 - Zona B</strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 6 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: uZalin - Coco - SHAKA
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png">: Vini - Opsa - eleze
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> SHAKA x5 ; Vini e/c
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> eleze 
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> Coco x2 ; uZalin 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> 
+
+
+<strong>MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> <strong>SHAKA</strong> (aunque tenga que elegir el staff es bastante obvio)
+
+❌ <strong><u>Incidencias</u></strong>
+Esperamos 13 min a que llegue opsa para poder jugar el partido.
+
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=a0820437febe59ebf83af4a5eed32124">https://thehax.pl/forum/powtorki.php?nagranie=a0820437febe59ebf83af4a5eed32124</a></span> <span class=chatlog__edited-timestamp title="jueves, 30 de marzo de 2023 2:28">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=a0820437febe59ebf83af4a5eed32124"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091070031846191116 class=chatlog__message-container data-message-id=1091070031846191116><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(117,174,224) title=.coco18>[NG/StP/IH] Coco</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090867958986834020')"> <strong>Fecha 2 - Zona B</strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 6 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: uZalin - Coco - SHAKA
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png">: Vini - Opsa - eleze
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> SHAKA x5 ; Vini e/c
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> eleze 
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> Coco x2 ; uZalin 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> 
+
+
+<strong>MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> <strong>SHAKA</strong> (aunque tenga que elegir el staff es bastante obvio)
+
+❌ <strong><u>Incidencias</u></strong>
+Esperamos 13 min a que llegue opsa para poder jugar el partido.
+
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=a0820437febe59ebf83af4a5eed32124">https://thehax.pl/forum/powtorki.php?nagranie=a0820437febe59ebf83af4a5eed32124</a> </span> <span class=chatlog__reply-edited-timestamp title="jueves, 30 de marzo de 2023 2:28">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 15:42"><a href=#chatlog__message-container-1091070031846191116>30/03/2023 15:42</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura shaka</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091070080936316959 class=chatlog__message-container data-message-id=1091070080936316959><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/dc07744fd7c2e3c71802b8f4567e33bc-A24AE.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(32,102,148) title=_naguto>[ATS] ñaguto</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090822520925601852')"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> 1-3 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> bastiuu-sabo-exss
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> solari-centu-manq
+
+goles: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> excessive x1
+asistencias; <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> n/a
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> goles: centu x3
+asistencias; <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> asistencias; manqui x1, tano x2 </span> <span class=chatlog__reply-edited-timestamp title="miércoles, 29 de marzo de 2023 23:19">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 15:42"><a href=#chatlog__message-container-1091070080936316959>30/03/2023 15:42</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura centu</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091070191556890747 class=chatlog__message-container data-message-id=1091070191556890747><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/7c9c769ba384167568e41cda18be5091-DBCAD.png alt=Avatar loading=lazy><div class=chatlog__reply-author title=wolves_fan>Rúben Neves</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090811200129994815')"> <strong>Fecha 3 - Zona A</strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> 2-0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> Bastiuu - Sabo - Excessive
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> Mhkitaryan - Jere - Doomposter
+
+Goles <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> Excessive x1, Sabo x1
+Asistencias <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> N/A
+
+Goles <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> N/A
+Asistencias <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> N/A
+
+Figura: Excessive <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 15:43"><a href=#chatlog__message-container-1091070191556890747>30/03/2023 15:43</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura excessive</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091070250923081798 class=chatlog__message-container data-message-id=1091070250923081798><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/fd3b3cf51b1aeffd51d0af3488da41a9-07C07.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(96,125,139) title=xenonxn>[GOD] Kagami</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090785310163619880')"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png"> 0 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> 
+Gol: Cone
+Asis: Xen&#243;n 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png"> 
+Gol: - 
+Asis: - 
+
+Valla (no s&#233; si se siguen contando): Ronal EST
+
+Figura: Decide el staff 
+
+Video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=60855dd566e1340b37c7b6afc04f0cfd">https://thehax.pl/forum/powtorki.php?nagranie=60855dd566e1340b37c7b6afc04f0cfd</a> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 15:43"><a href=#chatlog__message-container-1091070250923081798>30/03/2023 15:43</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Xenon</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091070341964628098 class=chatlog__message-container data-message-id=1091070341964628098><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/83572ab2ff2edc4608dd5c26aa15d4fd-E7FB0.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(87,58,3) title=sunnn2948>[CAL] Sakuraton</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1090471801995407490')"> Torneo transicion Fecha 2 - ZONA B
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AVL"
+    title="AVL"
+    src="../assets_2/1046191407897006130-72D95.png"> 0 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="BBC"
+    title="BBC"
+    src="../assets_2/1046193604290428959-1BEFC.png"> 
+
+BBC:
+
+Sakuraton - Julian - Guille (1G)
+
+AVL: 
+
+Savio - Frank - Lince
+
+Video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=02e6257f6ef0161aa4313090143601bd">https://thehax.pl/forum/powtorki.php?nagranie=02e6257f6ef0161aa4313090143601bd</a> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 15:44"><a href=#chatlog__message-container-1091070341964628098>30/03/2023 15:44</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura Guille</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091184323547381841 class=chatlog__message-container data-message-id=1091184323547381841><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/3-FB033.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title="Deleted User" data-user-id=456226577798135808>Deleted User</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 23:16"><a href=#chatlog__message-container-1091184323547381841>30/03/2023 23:16</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> 4-4 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> opsa - eleze - BubalGOD
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> lhezbest - paco amoroso - TUQ
+
+Goles: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> paco amoroso x3 - opsa e/c
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png"> BubalGOD x3 - eleze (VAR)
+
+Asis: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> lhezbest  - TUQ 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="FKT"
+    title="FKT"
+    src="../assets_2/1089382776970678372-2F7F8.png">: eleze - opsa (VAR)
+
+Incidentes: 4to gol de Frankfurt a revisar (11:40 del video) <span class="chatlog__markdown-mention">#&#128249;│var</span> 
+
+pd: lindo match, de 3-0 a 3-4 en 2 minutos
+
+Figura Staff  
+V&#237;deo <a href="https://thehax.pl/forum/powtorki.php?nagranie=996da19819878e8e11d210afdf914137">https://thehax.pl/forum/powtorki.php?nagranie=996da19819878e8e11d210afdf914137</a></span> <span class=chatlog__edited-timestamp title="jueves, 30 de marzo de 2023 23:17">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=996da19819878e8e11d210afdf914137"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091186910170451978 class=chatlog__message-container data-message-id=1091186910170451978><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=latta12 data-user-id=943313329143840808>[TDH] Lie To Me</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 23:27"><a href=#chatlog__message-container-1091186910170451978>30/03/2023 23:27</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>BBC 1 - 0 KAW
+
+Goles: x1 ekz 
+Asistencias: x1 juliancitow
+figura: juliancitow
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=48952872d67c882b8f218c6693b70410">https://thehax.pl/forum/powtorki.php?nagranie=48952872d67c882b8f218c6693b70410</a></span> <span class=chatlog__edited-timestamp title="sábado, 1 de abril de 2023 10:41">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=48952872d67c882b8f218c6693b70410"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091190639577808946 class=chatlog__message-container data-message-id=1091190639577808946><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2518acca96875eafb907e13317362013-B7D7A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=centu72 data-user-id=413461504499777536>Centu</span> <span class=chatlog__timestamp title="jueves, 30 de marzo de 2023 23:42"><a href=#chatlog__message-container-1091190639577808946>30/03/2023 23:42</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>SF 4 - 0 TA ( 3 VS 2)
+
+REC: <a href="https://thehax.pl/forum/powtorki.php?nagranie=58f763c8bbbeba792428ab53a5bad6f4">https://thehax.pl/forum/powtorki.php?nagranie=58f763c8bbbeba792428ab53a5bad6f4</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=58f763c8bbbeba792428ab53a5bad6f4"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1091196334536654858 class=chatlog__message-container data-message-id=1091196334536654858><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/0c85d51c4ef9fae9f4a0f3dc5a9a8b41-22959.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(230,126,34) title=latta12>[TDH] Lie To Me</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1091186910170451978')"> BBC 1 - 0 KAW
+
+Goles: x1 ekz 
+Asistencias: x1 juliancitow
+figura: juliancitow
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=48952872d67c882b8f218c6693b70410">https://thehax.pl/forum/powtorki.php?nagranie=48952872d67c882b8f218c6693b70410</a> </span> <span class=chatlog__reply-edited-timestamp title="sábado, 1 de abril de 2023 10:41">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=barto0001 data-user-id=737468837917884476>[Parma] Bruja Verón</span> <span class=chatlog__timestamp title="viernes, 31 de marzo de 2023 0:04"><a href=#chatlog__message-container-1091196334536654858>31/03/2023 0:04</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura juliancitow</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092276041269133342 class=chatlog__message-container data-message-id=1092276041269133342><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/fd3b3cf51b1aeffd51d0af3488da41a9-07C07.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(96,125,139) title=xenonxn data-user-id=327878246731481098>[GOD] Kagami</span> <span class=chatlog__timestamp title="domingo, 2 de abril de 2023 23:35"><a href=#chatlog__message-container-1092276041269133342>02/04/2023 23:35</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> 0 - 0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 
+
+Figura: Staff
+
+video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=37ee79f371a5fe7b37c2646a735b94c4">https://thehax.pl/forum/powtorki.php?nagranie=37ee79f371a5fe7b37c2646a735b94c4</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=37ee79f371a5fe7b37c2646a735b94c4"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092531398180622366 class=chatlog__message-container data-message-id=1092531398180622366><div class=chatlog__message><div class=chatlog__message-aside><svg class=chatlog__system-notification-icon><use href=#thread-icon></use></svg></div><div class=chatlog__message-primary><span class=chatlog__system-notification-author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span> </span> <span class=chatlog__system-notification-content> <span>started a thread.</span> </span> <span class=chatlog__system-notification-timestamp title="lunes, 3 de abril de 2023 16:29"> <a href=#chatlog__message-container-1092531398180622366>03/04/2023 16:29</a> </span></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092617460735279185 class=chatlog__message-container data-message-id=1092617460735279185><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0370765b2d26b0476e087c166fa3fc88-411E9.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=tomy_camino data-user-id=784198529324154921>[tR] TMS</span> <span class=chatlog__timestamp title="lunes, 3 de abril de 2023 22:11"><a href=#chatlog__message-container-1092617460735279185>03/04/2023 22:11</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>FNC 3 - 0 NT</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092620132326576169 class=chatlog__message-container data-message-id=1092620132326576169><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/4eca61fe18b455b527f2af6733db4a3d-5C1F3.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=duartenico7 data-user-id=1053050830045069323>[tR] Iker Muniain</span> <span class=chatlog__timestamp title="lunes, 3 de abril de 2023 22:22"><a href=#chatlog__message-container-1092620132326576169>03/04/2023 22:22</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AVL"
+    title="AVL"
+    src="../assets_2/1046191407897006130-72D95.png"> 6-1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="CSDY"
+    title="CSDY"
+    src="../assets_2/1087936867514720337-A83E1.png"> <strong>Fecha 3 - Zona B</strong>
+
+ El partido se jugo 3v2 
+ Figura: <span class="chatlog__markdown-mention" title="30h">@30h</span> 
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=dc191164d4ca3d5fdb355529678e4f17">https://thehax.pl/forum/powtorki.php?nagranie=dc191164d4ca3d5fdb355529678e4f17</a></span> <span class=chatlog__edited-timestamp title="lunes, 3 de abril de 2023 22:24">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=dc191164d4ca3d5fdb355529678e4f17"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div><div class=chatlog__reactions><div class=chatlog__reaction title=question><img class="chatlog__emoji chatlog__emoji--small" alt=❓ src=../assets_2/2753-7C696.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092635436297498675 class=chatlog__message-container data-message-id=1092635436297498675><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/8f1f60a62fb1e598f440f298f5b96690-E4843.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(218,109,19) title=felo32 data-user-id=658682970990968844>[EFC] Doomposter</span> <span class=chatlog__timestamp title="lunes, 3 de abril de 2023 23:23"><a href=#chatlog__message-container-1092635436297498675>03/04/2023 23:23</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Fnc 3-0 efc dsp edito</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092636152189702246 class=chatlog__message-container data-message-id=1092636152189702246><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,57,66) title=zequeira data-user-id=417867043119824927>[DR] duki</span> <span class=chatlog__timestamp title="lunes, 3 de abril de 2023 23:25"><a href=#chatlog__message-container-1092636152189702246>03/04/2023 23:25</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 3-0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> <strong>DEFAULT</strong>
+Incidentes: Solamente se presento &#241;aguto, el cual aviso 23:14 que estaban <em>ofis tras ofis</em> y no pod&#237;an jugarlo hoy.
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=90d216bd608b5513f0db451d0d980537">https://thehax.pl/forum/powtorki.php?nagranie=90d216bd608b5513f0db451d0d980537</a></span></div><div class=chatlog__reactions><div class=chatlog__reaction title=thumbsup><img class="chatlog__emoji chatlog__emoji--small" alt=👍 src=../assets_2/1f44d-27259.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092644154300969082 class=chatlog__message-container data-message-id=1092644154300969082><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/8f1f60a62fb1e598f440f298f5b96690-E4843.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(218,109,19) title=felo32>[EFC] Doomposter</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1092635436297498675')"> Fnc 3-0 efc dsp edito </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="lunes, 3 de abril de 2023 23:57"><a href=#chatlog__message-container-1092644154300969082>03/04/2023 23:57</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>En <span class="chatlog__markdown-mention">#deleted-channel</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092644176908255322 class=chatlog__message-container data-message-id=1092644176908255322><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(238,57,66) title=zequeira>[DR] duki</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1092636152189702246')"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 3-0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> <strong>DEFAULT</strong>
+Incidentes: Solamente se presento &#241;aguto, el cual aviso 23:14 que estaban <em>ofis tras ofis</em> y no pod&#237;an jugarlo hoy.
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=90d216bd608b5513f0db451d0d980537">https://thehax.pl/forum/powtorki.php?nagranie=90d216bd608b5513f0db451d0d980537</a> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="lunes, 3 de abril de 2023 23:57"><a href=#chatlog__message-container-1092644176908255322>03/04/2023 23:57</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>En <span class="chatlog__markdown-mention">#deleted-channel</span></span></div><div class=chatlog__reactions><div class=chatlog__reaction title=white_check_mark><img class="chatlog__emoji chatlog__emoji--small" alt=✅ src=../assets_2/2705-0589F.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092645118521135105 class=chatlog__message-container data-message-id=1092645118521135105><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/06a85f4d85a08298f5cbdc66fcdb0d41-13DC5.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(194,124,14) title=pichon10 data-user-id=411977094424428555>Pichon</span> <span class=chatlog__timestamp title="martes, 4 de abril de 2023 0:01"><a href=#chatlog__message-container-1092645118521135105>04/04/2023 0:01</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png"> SK 2 - 1 TDS <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png">  setelers - Javo - Vicho
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png">  duki - Nordic - Tara
+
+Goles
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png"> Javo, Vicho
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> Nordic
+
+Asistencias
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png"> Vicho, Javo
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png">-
+
+MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg">
+Staff
+
+VIDEO
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=1fb4facff0d7d66962a023e4da925794&amp;t=3s">https://thehax.pl/forum/powtorki.php?nagranie=1fb4facff0d7d66962a023e4da925794&amp;t=3s</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=1fb4facff0d7d66962a023e4da925794&amp;t=3s"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092692603385946112 class=chatlog__message-container data-message-id=1092692603385946112><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/06a85f4d85a08298f5cbdc66fcdb0d41-13DC5.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(194,124,14) title=pichon10>Pichon</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1092645118521135105')"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png"> SK 2 - 1 TDS <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png">  setelers - Javo - Vicho
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png">  duki - Nordic - Tara
+
+Goles
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png"> Javo, Vicho
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> Nordic
+
+Asistencias
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SK"
+    title="SK"
+    src="../assets_2/773275801931350046-37110.png"> Vicho, Javo
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png">-
+
+MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg">
+Staff
+
+VIDEO
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=1fb4facff0d7d66962a023e4da925794&amp;t=3s">https://thehax.pl/forum/powtorki.php?nagranie=1fb4facff0d7d66962a023e4da925794&amp;t=3s</a> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="martes, 4 de abril de 2023 3:10"><a href=#chatlog__message-container-1092692603385946112>04/04/2023 3:10</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>figura vicho</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092984296853209188 class=chatlog__message-container data-message-id=1092984296853209188><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/4-4551A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=frank11893 data-user-id=389990539388518400>[EFC] Frank</span> <span class=chatlog__timestamp title="martes, 4 de abril de 2023 22:29"><a href=#chatlog__message-container-1092984296853209188>04/04/2023 22:29</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>AVL 3 - 0 EINTRACHT FRANKFRUTER
+DF</span> <span class=chatlog__edited-timestamp title="martes, 4 de abril de 2023 22:30">(edited)</span></div><div class=chatlog__attachment><a href=../assets_2/image-8E350.png> <img class=chatlog__attachment-media src=../assets_2/image-8E350.png alt="Image attachment" title="Image: image.png (623.03 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092996013008097360 class=chatlog__message-container data-message-id=1092996013008097360><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=latta12 data-user-id=943313329143840808>[TDH] Lie To Me</span> <span class=chatlog__timestamp title="martes, 4 de abril de 2023 23:15"><a href=#chatlog__message-container-1092996013008097360>04/04/2023 23:15</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>BBC 3 - 0 YUPANQUI (DF)
+ se presento solo 30h</span> <span class=chatlog__edited-timestamp title="martes, 4 de abril de 2023 23:51">(edited)</span></div><div class=chatlog__attachment><a href=../assets_2/image-16248.png> <img class=chatlog__attachment-media src=../assets_2/image-16248.png alt="Image attachment" title="Image: image.png (104 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1092996690744713246 class=chatlog__message-container data-message-id=1092996690744713246><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/cd156c6025b8806e2e7230740f14a981-F37D5.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(87,58,3) title=magico03 data-user-id=422218736448176138>[CAL/NG/CHT] Mágico</span> <span class=chatlog__timestamp title="martes, 4 de abril de 2023 23:18"><a href=#chatlog__message-container-1092996690744713246>04/04/2023 23:18</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>NT 3  - 0 FNC (DF)</span></div><div class=chatlog__attachment><a href=../assets_2/image-F9005.png> <img class=chatlog__attachment-media src=../assets_2/image-F9005.png alt="Image attachment" title="Image: image.png (30.25 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1093070080809648128 class=chatlog__message-container data-message-id=1093070080809648128><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/3-FB033.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title="Deleted User" data-user-id=456226577798135808>Deleted User</span> <span class=chatlog__timestamp title="miércoles, 5 de abril de 2023 4:10"><a href=#chatlog__message-container-1093070080809648128>05/04/2023 4:10</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png">  sB 2 - 1 EST <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png">   lhezbest - Paco Amoroso - TUQ
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png">   ronal - Xenon - ravel
+
+Goles
+ <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png">TUQ, ronal e/c
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> ravel
+
+Asistencias
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"> Paco Amoroso
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png">Xenon
+
+MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg">
+Staff
+
+VIDEO</span></div></div></div></div><div id=chatlog__message-container-1093070279967776798 class=chatlog__message-container data-message-id=1093070279967776798><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="miércoles, 5 de abril de 2023 4:11">4:11</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://thehax.pl/forum/powtorki.php?nagranie=88247ee9fed0d3323382823535e2d67b">https://thehax.pl/forum/powtorki.php?nagranie=88247ee9fed0d3323382823535e2d67b</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=88247ee9fed0d3323382823535e2d67b"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div><div class=chatlog__reactions><div class=chatlog__reaction title=open_mouth><img class="chatlog__emoji chatlog__emoji--small" alt=😮 src=../assets_2/1f62e-FE396.svg loading=lazy> <span class=chatlog__reaction-count>4</span></div><div class=chatlog__reaction title=SB><img class="chatlog__emoji chatlog__emoji--small" alt=SB src=../assets_2/1087936321458282509-43821.png loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1093366651170332693 class=chatlog__message-container data-message-id=1093366651170332693><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,57,66) title=zequeira data-user-id=417867043119824927>[DR] duki</span> <span class=chatlog__timestamp title="miércoles, 5 de abril de 2023 23:48"><a href=#chatlog__message-container-1093366651170332693>05/04/2023 23:48</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="tA"
+    title="tA"
+    src="../assets_2/1086184206415167579-69D3D.png"> 0-5 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png">
+Goles:  duki  x3 - Isagi (Pastore) x1 -Nagi (iTzTany) x1
+Asistencia: Nagi (iTzTany) x2 - Isagi (Pastore) x2 - duki x1
+Figura: Staff
+Valla: Isagi (Pastore)
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=b8b283e2f95908fdfd3d0962d45688c2">https://thehax.pl/forum/powtorki.php?nagranie=b8b283e2f95908fdfd3d0962d45688c2</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=b8b283e2f95908fdfd3d0962d45688c2"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1093367707820367873 class=chatlog__message-container data-message-id=1093367707820367873><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(238,57,66) title=zequeira>[DR] duki</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1093366651170332693')"> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="tA"
+    title="tA"
+    src="../assets_2/1086184206415167579-69D3D.png"> 0-5 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png">
+Goles:  duki  x3 - Isagi (Pastore) x1 -Nagi (iTzTany) x1
+Asistencia: Nagi (iTzTany) x2 - Isagi (Pastore) x2 - duki x1
+Figura: Staff
+Valla: Isagi (Pastore)
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=b8b283e2f95908fdfd3d0962d45688c2">https://thehax.pl/forum/powtorki.php?nagranie=b8b283e2f95908fdfd3d0962d45688c2</a> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="miércoles, 5 de abril de 2023 23:52"><a href=#chatlog__message-container-1093367707820367873>05/04/2023 23:52</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Figura: Duki</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1093377001001336832 class=chatlog__message-container data-message-id=1093377001001336832><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/049896c8392f556499def48cfadc42a0-47A3C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sabotash_ data-user-id=875335365127450674>SABOTASH</span> <span class=chatlog__timestamp title="jueves, 6 de abril de 2023 0:29"><a href=#chatlog__message-container-1093377001001336832>06/04/2023 0:29</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png"> WOLV  3 - 0  FNC (DF)</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=wheelchair><img class="chatlog__emoji chatlog__emoji--small" alt=♿ src=../assets_2/267f-0A53E.svg loading=lazy> <span class=chatlog__reaction-count>3</span></div></div></div></div></div><div id=chatlog__message-container-1093377175471784036 class=chatlog__message-container data-message-id=1093377175471784036><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="jueves, 6 de abril de 2023 0:30">0:30</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href=../assets_2/DF_FNC-A7585.png> <img class=chatlog__attachment-media src=../assets_2/DF_FNC-A7585.png alt="Image attachment" title="Image: DF_FNC.png (103.9 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1093713217282375710 class=chatlog__message-container data-message-id=1093713217282375710><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=latta12 data-user-id=943313329143840808>[TDH] Lie To Me</span> <span class=chatlog__timestamp title="jueves, 6 de abril de 2023 22:45"><a href=#chatlog__message-container-1093713217282375710>06/04/2023 22:45</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>FKT 0 - BBC 3 (DF)</span></div><div class=chatlog__attachment><a href=../assets_2/image-8FA7A.png> <img class=chatlog__attachment-media src=../assets_2/image-8FA7A.png alt="Image attachment" title="Image: image.png (106.31 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1094118091941740628 class=chatlog__message-container data-message-id=1094118091941740628><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="sábado, 8 de abril de 2023 1:34"><a href=#chatlog__message-container-1094118091941740628>08/04/2023 1:34</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 2 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png"></strong>
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: Matias, Coco, SHAKA
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png">: lhezbeck, erikk, TUQ
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> Coco, SHAKA
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png">: lhezbest
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: SHAKA
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SB"
+    title="SB"
+    src="../assets_2/1087936321458282509-43821.png">: TUQ
+
+<strong>MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"></strong>
+cualquiera de <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> pero densela a SHAKA
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=460bf237c22521da5df2233c10b5a125">https://thehax.pl/forum/powtorki.php?nagranie=460bf237c22521da5df2233c10b5a125</a> (empieza en el minuto 10)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=460bf237c22521da5df2233c10b5a125"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1094802865417105448 class=chatlog__message-container data-message-id=1094802865417105448><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="domingo, 9 de abril de 2023 22:55"><a href=#chatlog__message-container-1094802865417105448>09/04/2023 22:55</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> <strong>4 - 2</strong> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AVL"
+    title="AVL"
+    src="../assets_2/1046191407897006130-72D95.png"> 
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png">: Infinity, Xen&#243;n, Ronal
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AVL"
+    title="AVL"
+    src="../assets_2/1046191407897006130-72D95.png">: Savio, Frank, Lince (gavi)
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png">: Ronal x2, Xen&#243;n, Infinity
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AVL"
+    title="AVL"
+    src="../assets_2/1046191407897006130-72D95.png">: Frank x2
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png">: Xen&#243;n, Ronal
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AVL"
+    title="AVL"
+    src="../assets_2/1046191407897006130-72D95.png">: gavi
+
+❌ <strong><u>INCIDENCIAS: lince se err&#243; un gol solo y posterior a eso se fue a jugar un oficial de real soccer faltando 3 minutos para que termine el encuentro.</u></strong>
+
+<strong>MVP</strong> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"> 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EST"
+    title="EST"
+    src="../assets_2/806198838871851049-8D17F.png"> <strong>Ronal</strong> (por su eficacia y la manera de adelantarse a savio y ganarle la espalda, destac&#243; totalmente a xen&#243;n estaban ahi ahi los dos.)
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=bcb78b62e4d2903dda8bc2f063112aed">https://thehax.pl/forum/powtorki.php?nagranie=bcb78b62e4d2903dda8bc2f063112aed</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=bcb78b62e4d2903dda8bc2f063112aed"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div><div class=chatlog__reactions><div class=chatlog__reaction title=emoji_45><img class="chatlog__emoji chatlog__emoji--small" alt=emoji_45 src=../assets_2/904980484692541450-F0652.gif loading=lazy> <span class=chatlog__reaction-count>4</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095153482274713630 class=chatlog__message-container data-message-id=1095153482274713630><div class=chatlog__message><div class=chatlog__message-aside><svg class=chatlog__system-notification-icon><use href=#thread-icon></use></svg></div><div class=chatlog__message-primary><span class=chatlog__system-notification-author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span> </span> <span class=chatlog__system-notification-content> <span>started a thread.</span> </span> <span class=chatlog__system-notification-timestamp title="lunes, 10 de abril de 2023 22:08"> <a href=#chatlog__message-container-1095153482274713630>10/04/2023 22:08</a> </span></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095172099762561145 class=chatlog__message-container data-message-id=1095172099762561145><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/06a85f4d85a08298f5cbdc66fcdb0d41-13DC5.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(194,124,14) title=pichon10 data-user-id=411977094424428555>Pichon</span> <span class=chatlog__timestamp title="lunes, 10 de abril de 2023 23:22"><a href=#chatlog__message-container-1095172099762561145>10/04/2023 23:22</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>SK 5 - 0 EFC
+
+Incidencias: fue 3vs2
+
+Video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=f26974d545924b76e6a33008cecc588a">https://thehax.pl/forum/powtorki.php?nagranie=f26974d545924b76e6a33008cecc588a</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=f26974d545924b76e6a33008cecc588a"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095175540337549393 class=chatlog__message-container data-message-id=1095175540337549393><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/06a85f4d85a08298f5cbdc66fcdb0d41-13DC5.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(194,124,14) title=pichon10>Pichon</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1095172099762561145')"> SK 5 - 0 EFC
+
+Incidencias: fue 3vs2
+
+Video: <a href="https://thehax.pl/forum/powtorki.php?nagranie=f26974d545924b76e6a33008cecc588a">https://thehax.pl/forum/powtorki.php?nagranie=f26974d545924b76e6a33008cecc588a</a> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="lunes, 10 de abril de 2023 23:36"><a href=#chatlog__message-container-1095175540337549393>10/04/2023 23:36</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Df</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095177486825967698 class=chatlog__message-container data-message-id=1095177486825967698><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/06a85f4d85a08298f5cbdc66fcdb0d41-13DC5.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(194,124,14) title=pichon10 data-user-id=411977094424428555>Pichon</span> <span class=chatlog__timestamp title="lunes, 10 de abril de 2023 23:44"><a href=#chatlog__message-container-1095177486825967698>10/04/2023 23:44</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>FNC 0 - 3 SK (DF)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095180474579697684 class=chatlog__message-container data-message-id=1095180474579697684><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1ae199f056d29c8aacdd2654dd8a643f-53E05.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,57,66) title=zequeira data-user-id=417867043119824927>[DR] duki</span> <span class=chatlog__timestamp title="lunes, 10 de abril de 2023 23:56"><a href=#chatlog__message-container-1095180474579697684>10/04/2023 23:56</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="TDS"
+    title="TDS"
+    src="../assets_2/1046193069525053571-0ACAD.png"> 3-1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="WOL"
+    title="WOL"
+    src="../assets_2/1086182988104077354-992A9.png">
+Goles: Nordic x2 - Tany - Fachy - 
+Asistencia: Pastore 
+Figura: Staff
+V&#237;deo: <a href="https://thehax.pl/forum/powtorki.php?nagranie=3ac14135e2ef0eae2cc7974487505778">https://thehax.pl/forum/powtorki.php?nagranie=3ac14135e2ef0eae2cc7974487505778</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=3ac14135e2ef0eae2cc7974487505778"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095181025413431326 class=chatlog__message-container data-message-id=1095181025413431326><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="lunes, 10 de abril de 2023 23:58"><a href=#chatlog__message-container-1095181025413431326>10/04/2023 23:58</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>CSDY 0-3 KAW df</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095187073209733190 class=chatlog__message-container data-message-id=1095187073209733190><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2518acca96875eafb907e13317362013-B7D7A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=centu72 data-user-id=413461504499777536>Centu</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 0:22"><a href=#chatlog__message-container-1095187073209733190>11/04/2023 0:22</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> 5 - 0 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="EFC"
+    title="EFC"
+    src="../assets_2/1046191418877677719-C593C.png"> 
+
+Goles: manquilef x3, Centu x1, sanogo x1
+Asistencias: Centu x2, sanogo x1
+
+figura: decide staff
+v&#237;deo: <a href="https://thehax.pl/forum/powtorki.php?nagranie=3107b0726704335513ebd6a67a53aa40">https://thehax.pl/forum/powtorki.php?nagranie=3107b0726704335513ebd6a67a53aa40</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=3107b0726704335513ebd6a67a53aa40"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095188030261833838 class=chatlog__message-container data-message-id=1095188030261833838><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 0:26"><a href=#chatlog__message-container-1095188030261833838>11/04/2023 0:26</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://discord.com/channels/696901033904963674/1088176663369621544/1095153482274713630" onclick="scrollToMessage(event, '1095153482274713630')">https://discord.com/channels/696901033904963674/1088176663369621544/1095153482274713630</a>
+Suban ac&#225; lo de la fecha 6 gordos despu&#233;s es un quilombo</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095192900477915186 class=chatlog__message-container data-message-id=1095192900477915186><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(241,196,15) title=birkirmarsaevarsson>[AdC] Birkir</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1095181025413431326')"> CSDY 0-3 KAW df </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 0:45"><a href=#chatlog__message-container-1095192900477915186>11/04/2023 0:45</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Firmaron? O sacaste alguna captura?</span> <span class=chatlog__edited-timestamp title="martes, 11 de abril de 2023 0:46">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095202305906839552 class=chatlog__message-container data-message-id=1095202305906839552><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 1:22"><a href=#chatlog__message-container-1095202305906839552>11/04/2023 1:22</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>b4</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=white_check_mark><img class="chatlog__emoji chatlog__emoji--small" alt=✅ src=../assets_2/2705-0589F.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095205627514601522 class=chatlog__message-container data-message-id=1095205627514601522><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/1248c34f3fa08c99fbbbe07a6b199453-A1420.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(241,196,15) title=birkirmarsaevarsson>[AdC] Birkir</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1095202305906839552')"> b4 </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,43,43) title=pacar22 data-user-id=474039012105912330>[CAL] Morata</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 1:36"><a href=#chatlog__message-container-1095205627514601522>11/04/2023 1:36</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Contra ng cu&#225;nto salieron?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095207497696026684 class=chatlog__message-container data-message-id=1095207497696026684><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/e01d3a86d9720c3c19c3af30e80fa1ab-2A928.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(96,125,139) title=nacho0912 data-user-id=330935098264387585>[NG] Tractor</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 1:43"><a href=#chatlog__message-container-1095207497696026684>11/04/2023 1:43</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> 1 - 2 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> Fecha 5
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> Tano - Centu - mnqqq
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> Tractor - Magico - Facha
+
+Goles: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> Facha - Tractor / <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> Centu
+Asistencias: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> M&#225;gico - Facha / <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="SF"
+    title="SF"
+    src="../assets_2/1046191428537159750-7468E.png"> Tano
+
+Figura: M&#225;gico <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> 
+Destacados: Tractor <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> - Tractor <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> 
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=816b223b631ad6601c90211351321a3b&amp;t=14m58s">https://thehax.pl/forum/powtorki.php?nagranie=816b223b631ad6601c90211351321a3b&amp;t=14m58s</a></span> <span class=chatlog__edited-timestamp title="martes, 11 de abril de 2023 1:53">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=816b223b631ad6601c90211351321a3b&amp;t=14m58s"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095209781502935080 class=chatlog__message-container data-message-id=1095209781502935080><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/e01d3a86d9720c3c19c3af30e80fa1ab-2A928.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(96,125,139) title=nacho0912 data-user-id=330935098264387585>[NG] Tractor</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 1:52"><a href=#chatlog__message-container-1095209781502935080>11/04/2023 1:52</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> 4 - 1 <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="tA"
+    title="tA"
+    src="../assets_2/1086184206415167579-69D3D.png"> Fecha 6
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> Tractor - M&#225;gico - Facha
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="tA"
+    title="tA"
+    src="../assets_2/1086184206415167579-69D3D.png"> Nasty Nas - Goy - Ross
+
+Goles: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> M&#225;gico x2 - Tractor - Facha / <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="tA"
+    title="tA"
+    src="../assets_2/1086184206415167579-69D3D.png"> Ross
+Asistencias: <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> Facha - M&#225;gico x2 / <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="tA"
+    title="tA"
+    src="../assets_2/1086184206415167579-69D3D.png"> Goy
+
+Figura: M&#225;gico
+Destacados: Facha <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> - Tractor <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NTBR"
+    title="NTBR"
+    src="../assets_2/1087936339762237460-4BBDB.png"> 
+
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=07cb215749f5dad6d37d5a5b8d5c0e1c&amp;t=15s">https://thehax.pl/forum/powtorki.php?nagranie=07cb215749f5dad6d37d5a5b8d5c0e1c&amp;t=15s</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=07cb215749f5dad6d37d5a5b8d5c0e1c&amp;t=15s"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095211521514164254 class=chatlog__message-container data-message-id=1095211521514164254><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7832f67ccc148faf285cf8455d48fc8d-E8D49.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(117,174,224) title=.coco18 data-user-id=414640775306149890>[NG/StP/IH] Coco</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 1:59"><a href=#chatlog__message-container-1095211521514164254>11/04/2023 1:59</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>[FECHA 4] <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png"> <strong>0 - 5</strong> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png">: Islandes, DROGBA, Naza
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: Matias, Coco, SHAKA
+
+<strong><u>Goles</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png">:
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: SHAKA x2, Coco x2, Islandes e/c
+
+<strong><u>Asistencias</u></strong>
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="KAW"
+    title="KAW"
+    src="../assets_2/1086176284880683028-118C6.png">:
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png">: SHAKA x2, Coco x2
+
+<strong>MVP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="../assets_2/1f31f-1B968.svg"></strong>
+Cualquiera de <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NG"
+    title="NG"
+    src="../assets_2/1087949397901443087-1835C.png"> 
+
+<strong><u>VIDEO</u></strong>
+<a href="https://thehax.pl/forum/powtorki.php?nagranie=e5fbd7ca189e1a9c0df7612ba3b22848">https://thehax.pl/forum/powtorki.php?nagranie=e5fbd7ca189e1a9c0df7612ba3b22848</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://thehax.pl/forum/powtorki.php?nagranie=e5fbd7ca189e1a9c0df7612ba3b22848"><div class="chatlog__markdown chatlog__markdown-preserve">Powt&#243;rki THEHAX</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">THEHAX - graj w ligach, turniejach, wyzwaniach. Tw&#243;rz z nami nową scenę haxball&#39;a w POLSCE</div></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095479432686346291 class=chatlog__message-container data-message-id=1095479432686346291><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="martes, 11 de abril de 2023 19:44"><a href=#chatlog__message-container-1095479432686346291>11/04/2023 19:44</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Por favor los informes de la fecha 6 en <span class="chatlog__markdown-mention">#deleted-channel</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095551309828075652 class=chatlog__message-container data-message-id=1095551309828075652><div class=chatlog__message><div class=chatlog__message-aside><svg class=chatlog__system-notification-icon><use href=#thread-icon></use></svg></div><div class=chatlog__message-primary><span class=chatlog__system-notification-author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span> </span> <span class=chatlog__system-notification-content> <span>started a thread.</span> </span> <span class=chatlog__system-notification-timestamp title="miércoles, 12 de abril de 2023 0:29"> <a href=#chatlog__message-container-1095551309828075652>12/04/2023 0:29</a> </span></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1095551421685973084 class=chatlog__message-container data-message-id=1095551421685973084><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/c1186929c6ec997df9cfc8cc8d31c160-0BF42.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(3,107,208) title=fachy data-user-id=365323262512857088>Fachy</span> <span class=chatlog__timestamp title="miércoles, 12 de abril de 2023 0:30"><a href=#chatlog__message-container-1095551421685973084>12/04/2023 0:30</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Por favor los informes de la fecha 7 en <span class="chatlog__markdown-mention">#deleted-channel</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1096620351103975434 class=chatlog__message-container data-message-id=1096620351103975434><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="viernes, 14 de abril de 2023 23:17"><a href=#chatlog__message-container-1096620351103975434>14/04/2023 23:17</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>sB 0-3 KAW (df) se presento lhezbest</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1096631782683721769 class=chatlog__message-container data-message-id=1096631782683721769><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0a0398baea0c1cb98b86b8818fa7957-DFEFA.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=eleze1606 data-user-id=996984676147282010>[CREW] eleze</span> <span class=chatlog__timestamp title="sábado, 15 de abril de 2023 0:03"><a href=#chatlog__message-container-1096631782683721769>15/04/2023 0:03</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>cobro df vs kaw le escribi para el host y nunca recibi una respuesta y hoy es la fecha maxima</span></div></div></div></div><div id=chatlog__message-container-1096631997302067311 class=chatlog__message-container data-message-id=1096631997302067311><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="sábado, 15 de abril de 2023 0:04">0:04</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>sino lo jugaba</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 85 message(s)</div><div class=postamble__entry>Timezone: UTC-3</div></div>

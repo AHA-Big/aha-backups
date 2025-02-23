@@ -1,0 +1,526 @@
+<!DOCTYPE html><html lang=en><head><title>AHA - Asociación de HaxBall Argentina - 🎲│apuestas-prode</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("../assets_2/ggsans-normal-400-1456D.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-500-89CE5.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-600-C1EA8.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-700-1949A.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("../assets_2/ggsans-normal-800-58487.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("../assets_2/ggsans-italic-400-E988B.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-500-0777F.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-600-CB411.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-700-891AC.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("../assets_2/ggsans-italic-800-D36B0.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=../assets_2/solarized-dark.min-BA98F.css><script src=../assets_2/highlight.min-D8D27.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=../assets_2/lottie.min-99657.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src=../assets_2/a_64ac57e8378133f8efed3f6b9e88739b-D5E37.gif alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>AHA - Asociación de HaxBall Argentina</div><div class=preamble__entry>🎯 PRODE / 🎲│apuestas-prode</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-965590213101486091 class=chatlog__message-container data-message-id=965590213101486091><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 9:30"><a href=#chatlog__message-container-965590213101486091>18/04/2022 9:30</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Arrancamos las apuestas:
+
+Ricardo Fort  vs. Samurai 
+Tigres del Sur vs Sokker 
+La Ten&#233;s Adentro vs La R Vivimo 
+Vikings Big vs Titanes del Haxball 
+
+
+V&#233;lez vs Big vs Black Cock
+Toco y Paso vs AC Milanesa
+SanBri Club vs Hist&#243;ricos 
+Juego Bonito Argentina vs Massachusetts Gang
+
+Cierre: 20 hs
+En caso de no saber como apostar <span class="chatlog__markdown-mention">#&#128203;│formato-prode</span> 
+
+Suerte a todos !!
+<span class="chatlog__markdown-mention">@everyone</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965595826439192626 class=chatlog__message-container data-message-id=965595826439192626><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/11bff44cbc4657097fc5e80dcd626c12-96D21.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(65,143,56) title=sisoyyooo data-user-id=421744851164463113>[COCO] Vitinha</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 9:53"><a href=#chatlog__message-container-965595826439192626>18/04/2022 9:53</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF, SK, LTA, VB, VL, TyP, Hi, Gang</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965599644111474688 class=chatlog__message-container data-message-id=965599644111474688><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 10:08"><a href=#chatlog__message-container-965599644111474688>18/04/2022 10:08</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+TDH
+VEL
+TYp
+HI
+JBA</span> <span class=chatlog__edited-timestamp title="lunes, 18 de abril de 2022 21:01">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965603404929966100 class=chatlog__message-container data-message-id=965603404929966100><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(241,196,15) title=birkirmarsaevarsson>[AdC] Birkir</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'965599644111474688')"> RF
+TDS
+LTA
+TDH
+VEL
+TYp
+HI
+JBA </span> <span class=chatlog__reply-edited-timestamp title="lunes, 18 de abril de 2022 21:01">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 10:23"><a href=#chatlog__message-container-965603404929966100>18/04/2022 10:23</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lee nuevamente el formato que no es v&#225;lida tu apuesta.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965628149905883256 class=chatlog__message-container data-message-id=965628149905883256><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1df2ab367b01d426eed57986edb8fe12-233E0.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=hasekvra data-user-id=649339953561600007>tsu</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 12:01"><a href=#chatlog__message-container-965628149905883256>18/04/2022 12:01</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+VB
+
+VL
+TYP
+Hi
+Gang</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965662680641851414 class=chatlog__message-container data-message-id=965662680641851414><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0370765b2d26b0476e087c166fa3fc88-411E9.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=tomy_camino data-user-id=784198529324154921>[tR] TMS</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 14:18"><a href=#chatlog__message-container-965662680641851414>18/04/2022 14:18</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+VL
+ACM
+HI
+JBA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965673469809401856 class=chatlog__message-container data-message-id=965673469809401856><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy><div class=chatlog__reply-author title=sebatolosa5327>SebaTolosa</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'965603404929966100')"> Lee nuevamente el formato que no es v&#225;lida tu apuesta. </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 15:01"><a href=#chatlog__message-container-965673469809401856>18/04/2022 15:01</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>como no se va a poder apostar a resultado exacto</span></div></div></div></div><div id=chatlog__message-container-965673500297822248 class=chatlog__message-container data-message-id=965673500297822248><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="lunes, 18 de abril de 2022 15:01">15:01</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>cualq cosa eso</span> <span class=chatlog__edited-timestamp title="lunes, 18 de abril de 2022 15:01">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965682999469412352 class=chatlog__message-container data-message-id=965682999469412352><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(241,196,15) title=birkirmarsaevarsson>[AdC] Birkir</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'965673469809401856')"> como no se va a poder apostar a resultado exacto </span></div></div><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 15:39"><a href=#chatlog__message-container-965682999469412352>18/04/2022 15:39</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>No hay problema, tu apuesta no es contabilizada.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965695234157727785 class=chatlog__message-container data-message-id=965695234157727785><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/91dca3afb003f154907a90e3525df159-5D60A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=martinnnn_ data-user-id=728122526479155201>Martinnnn</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 16:28"><a href=#chatlog__message-container-965695234157727785>18/04/2022 16:28</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+VL
+ACM
+HI
+JBA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965751804556095508 class=chatlog__message-container data-message-id=965751804556095508><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1-B2132.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=hhrrrrrrrrrrr4118 data-user-id=937891076868562964>hhrrrrrrrrrrr</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 20:12"><a href=#chatlog__message-container-965751804556095508>18/04/2022 20:12</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AHA2"
+    title="AHA2"
+    src="../assets_2/852030945330724894-1AF0F.png"> <u><strong>Cierro Prode</strong></u> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AHA2"
+    title="AHA2"
+    src="../assets_2/852030945330724894-1AF0F.png"></span> <span class=chatlog__edited-timestamp title="lunes, 18 de abril de 2022 20:13">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-965763752911835166 class=chatlog__message-container data-message-id=965763752911835166><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy><div class=chatlog__reply-author title=sebatolosa5327>SebaTolosa</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'965682999469412352')"> No hay problema, tu apuesta no es contabilizada. </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="lunes, 18 de abril de 2022 21:00"><a href=#chatlog__message-container-965763752911835166>18/04/2022 21:00</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>minimo deja participar ahi te lo cambie</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=rofl><img class="chatlog__emoji chatlog__emoji--small" alt=🤣 src=../assets_2/1f923-5854E.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966777251121233920 class=chatlog__message-container data-message-id=966777251121233920><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:07"><a href=#chatlog__message-container-966777251121233920>21/04/2022 16:07</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Se abren las apuestas
+
+Ricardo Fort vs Massachusetts Ganga
+Tigres del Sur vs Hist&#243;ricos
+La Ten&#233;s Adentro va Toco y Paso
+Titanes del Haxball vs Big Black Cock
+
+Cierra 20hs
+Recordar el formato de apuesta, SINO NO SE TENDRA EN CUENTA!
+
+Suerte a todos!! <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AHA2"
+    title="AHA2"
+    src="../assets_2/852030945330724894-1AF0F.png"> 
+<span class="chatlog__markdown-mention">@everyone</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966777817700384828 class=chatlog__message-container data-message-id=966777817700384828><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><div class=chatlog__reply-unknown>Original message was deleted or could not be loaded.</div></div><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:09"><a href=#chatlog__message-container-966777817700384828>21/04/2022 16:09</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention">#&#128203;│formato-prode</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966778570540204122 class=chatlog__message-container data-message-id=966778570540204122><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1df2ab367b01d426eed57986edb8fe12-233E0.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=hasekvra data-user-id=649339953561600007>tsu</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:12"><a href=#chatlog__message-container-966778570540204122>21/04/2022 16:12</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+Hi
+TyP
+BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966778628941709384 class=chatlog__message-container data-message-id=966778628941709384><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/91dca3afb003f154907a90e3525df159-5D60A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=martinnnn_ data-user-id=728122526479155201>Martinnnn</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:13"><a href=#chatlog__message-container-966778628941709384>21/04/2022 16:13</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TS
+LTA
+BBG</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966778697807986708 class=chatlog__message-container data-message-id=966778697807986708><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=suares12 data-user-id=379346390557523968>Lazan</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:13"><a href=#chatlog__message-container-966778697807986708>21/04/2022 16:13</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966778760437309540 class=chatlog__message-container data-message-id=966778760437309540><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/3-FB033.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title="Deleted User" data-user-id=456226577798135808>Deleted User</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:13"><a href=#chatlog__message-container-966778760437309540>21/04/2022 16:13</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+HI
+LTA
+TDH</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966778796084703294 class=chatlog__message-container data-message-id=966778796084703294><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/11bff44cbc4657097fc5e80dcd626c12-96D21.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(65,143,56) title=sisoyyooo data-user-id=421744851164463113>[COCO] Vitinha</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:13"><a href=#chatlog__message-container-966778796084703294>21/04/2022 16:13</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF Hi TyP BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966780648637497466 class=chatlog__message-container data-message-id=966780648637497466><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/86fd69a3c5864e95c0c22e25a480548c-D9507.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(46,204,113) title=dinoch data-user-id=681313291028791308>Dinoch</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:21"><a href=#chatlog__message-container-966780648637497466>21/04/2022 16:21</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966781161764421702 class=chatlog__message-container data-message-id=966781161764421702><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7339f804ecd6a6b82b2e29606f59d047-55988.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,165,0) title=pppp8200 data-user-id=554601414232375296>nuevo</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:23"><a href=#chatlog__message-container-966781161764421702>21/04/2022 16:23</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+BBC</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=TDH><img class="chatlog__emoji chatlog__emoji--small" alt=TDH src=../assets_2/773275385005342740-01904.png loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966781193985085510 class=chatlog__message-container data-message-id=966781193985085510><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/a_c8a046d4976f04761a9b60ed9f81aecc-AC96A.gif alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=jere3969 data-user-id=692269260763824148>[EFC/DH] jere</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:23"><a href=#chatlog__message-container-966781193985085510>21/04/2022 16:23</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+TDS
+LTA
+BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966786045045784576 class=chatlog__message-container data-message-id=966786045045784576><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 16:42"><a href=#chatlog__message-container-966786045045784576>21/04/2022 16:42</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF
+HIS
+LTA
+TDH</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966845179891965963 class=chatlog__message-container data-message-id=966845179891965963><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=latta12 data-user-id=943313329143840808>[TDH] Lie To Me</span> <span class=chatlog__timestamp title="jueves, 21 de abril de 2022 20:37"><a href=#chatlog__message-container-966845179891965963>21/04/2022 20:37</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>RF TDS LTA TDH</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=rofl><img class="chatlog__emoji chatlog__emoji--small" alt=🤣 src=../assets_2/1f923-5854E.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-966950789090254860 class=chatlog__message-container data-message-id=966950789090254860><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(230,126,34) title=latta12>[TDH] Lie To Me</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'966845179891965963')"> RF TDS LTA TDH </span></div></div><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="viernes, 22 de abril de 2022 3:37"><a href=#chatlog__message-container-966950789090254860>22/04/2022 3:37</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>20 hs cerraba.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967111447798767726 class=chatlog__message-container data-message-id=967111447798767726><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy><div class=chatlog__reply-author title=sebatolosa5327>SebaTolosa</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'966950789090254860')"> 20 hs cerraba. </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=latta12 data-user-id=943313329143840808>[TDH] Lie To Me</span> <span class=chatlog__timestamp title="viernes, 22 de abril de 2022 14:15"><a href=#chatlog__message-container-967111447798767726>22/04/2022 14:15</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Era todo mufa</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967939010955730954 class=chatlog__message-container data-message-id=967939010955730954><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:04"><a href=#chatlog__message-container-967939010955730954>24/04/2022 21:04</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Semifinal - Copa Del Mundo
+
+Massachusetts Gang vs Big Black Cock
+Tigres del Sur vs La Tenes Adentro
+
+Cierra 20 hs Lunes
+
+TDS vs LTA 
+CIERRA 22:30
+
+<span class="chatlog__markdown-mention">@everyone</span> 
+
+Ma&#241;ana se har&#225; el conteo de la anterior apuesta.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967939257631141949 class=chatlog__message-container data-message-id=967939257631141949><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/91dca3afb003f154907a90e3525df159-5D60A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=martinnnn_ data-user-id=728122526479155201>Martinnnn</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:05"><a href=#chatlog__message-container-967939257631141949>24/04/2022 21:05</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>BBC
+LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967939347133399080 class=chatlog__message-container data-message-id=967939347133399080><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1df2ab367b01d426eed57986edb8fe12-233E0.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=hasekvra data-user-id=649339953561600007>tsu</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:05"><a href=#chatlog__message-container-967939347133399080>24/04/2022 21:05</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Gang
+LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967940786538840084 class=chatlog__message-container data-message-id=967940786538840084><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/6fb7df5a1129a49a42ef555711635995-9416D.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy><div class=chatlog__reply-author title=sebatolosa5327>SebaTolosa</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'967939010955730954')"> Semifinal - Copa Del Mundo
+
+Massachusetts Gang vs Big Black Cock
+Tigres del Sur vs La Tenes Adentro
+
+Cierra 20 hs Lunes
+
+TDS vs LTA 
+CIERRA 22:30
+
+<span class="chatlog__markdown-mention">@everyone</span> 
+
+Ma&#241;ana se har&#225; el conteo de la anterior apuesta. </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(128,128,128) title=canog data-user-id=753827519983124591>[StP/NG] Cano Gambetti</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:11"><a href=#chatlog__message-container-967940786538840084>24/04/2022 21:11</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>no jug&#243; lta typ mano</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967940805547397170 class=chatlog__message-container data-message-id=967940805547397170><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/81b83681181ab4509c81e963102803aa-E2878.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(192,192,192) title=lazarepg data-user-id=415768913280892928>lazare</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:11"><a href=#chatlog__message-container-967940805547397170>24/04/2022 21:11</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>pero todav&#237;a no se jugo typ lta xd</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967940948543832085 class=chatlog__message-container data-message-id=967940948543832085><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/fa60118fe4739fd029661f9f0916e262-09E69.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy><div class=chatlog__reply-author title=sebatolosa5327>SebaTolosa</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'967939010955730954')"> Semifinal - Copa Del Mundo
+
+Massachusetts Gang vs Big Black Cock
+Tigres del Sur vs La Tenes Adentro
+
+Cierra 20 hs Lunes
+
+TDS vs LTA 
+CIERRA 22:30
+
+<span class="chatlog__markdown-mention">@everyone</span> 
+
+Ma&#241;ana se har&#225; el conteo de la anterior apuesta. </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(128,128,128) title=lodeiro10 data-user-id=966463584269914113>Lodeiro</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:11"><a href=#chatlog__message-container-967940948543832085>24/04/2022 21:11</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967941241872474182 class=chatlog__message-container data-message-id=967941241872474182><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=suares12 data-user-id=379346390557523968>Lazan</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:12"><a href=#chatlog__message-container-967941241872474182>24/04/2022 21:12</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>MG 5-0
+TDS</span> <span class=chatlog__edited-timestamp title="domingo, 24 de abril de 2022 21:14">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967944721064411247 class=chatlog__message-container data-message-id=967944721064411247><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=ssnowwww data-user-id=599013845608038461>Facuuuuuq</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:26"><a href=#chatlog__message-container-967944721064411247>24/04/2022 21:26</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Mg 
+Lta</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967944783354036274 class=chatlog__message-container data-message-id=967944783354036274><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/3-FB033.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title="Deleted User" data-user-id=456226577798135808>Deleted User</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:26"><a href=#chatlog__message-container-967944783354036274>24/04/2022 21:26</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>MG
+LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967945445919830016 class=chatlog__message-container data-message-id=967945445919830016><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/9bd04f979290b9a00e76f29222780bbd-3E565.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(230,126,34) title=suares12>Lazan</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'967941241872474182')"> MG 5-0
+TDS </span> <span class=chatlog__reply-edited-timestamp title="domingo, 24 de abril de 2022 21:14">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(128,128,128) title=fantasyplayer. data-user-id=471864176646815764>[URSS] Tano</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:29"><a href=#chatlog__message-container-967945445919830016>24/04/2022 21:29</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>BBC 7 (+3DF) - 0 MG</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967946325738000384 class=chatlog__message-container data-message-id=967946325738000384><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 21:33"><a href=#chatlog__message-container-967946325738000384>24/04/2022 21:33</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>BBC
+TYP</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=regional_indicator_q><img class="chatlog__emoji chatlog__emoji--small" alt=🇶 src=../assets_2/1f1f6-F7453.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div><div id=chatlog__message-container-967946374236754020 class=chatlog__message-container data-message-id=967946374236754020><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="domingo, 24 de abril de 2022 21:33">21:33</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>confio <span class="chatlog__markdown-mention" title="lazarepg">@lazare</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967958500229677116 class=chatlog__message-container data-message-id=967958500229677116><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/11bff44cbc4657097fc5e80dcd626c12-96D21.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(65,143,56) title=sisoyyooo data-user-id=421744851164463113>[COCO] Vitinha</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 22:21"><a href=#chatlog__message-container-967958500229677116>24/04/2022 22:21</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>MG 1-0
+TDS 2-1</span> <span class=chatlog__edited-timestamp title="lunes, 25 de abril de 2022 7:28">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967969707946835988 class=chatlog__message-container data-message-id=967969707946835988><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/838f0b6207032986fa15dfaee42e3b8c-CC6B6.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=latta12 data-user-id=943313329143840808>[TDH] Lie To Me</span> <span class=chatlog__timestamp title="domingo, 24 de abril de 2022 23:06"><a href=#chatlog__message-container-967969707946835988>24/04/2022 23:06</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>mg tds
+
+se copian del mufeitor <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="😂"
+    title="joy"
+    src="../assets_2/1f602-168C5.svg"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967989747618312252 class=chatlog__message-container data-message-id=967989747618312252><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src=../assets_2/81b83681181ab4509c81e963102803aa-E2878.png alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(192,192,192) title=lazarepg>lazare</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'967940805547397170')"> pero todav&#237;a no se jugo typ lta xd </span></div></div><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 0:25"><a href=#chatlog__message-container-967989747618312252>25/04/2022 0:25</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lazarepg">@lazare</span> no es un canal de debate.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-967999592400584744 class=chatlog__message-container data-message-id=967999592400584744><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 1:04"><a href=#chatlog__message-container-967999592400584744>25/04/2022 1:04</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Vamos a hacer algo m&#225;s resultadista.
+
+Adem&#225;s de poner quien puede ganar, agreguenle resultado.
+Si le pegan, se sumar&#225; 1.000.000 de ahacoins.
+
+<span class="chatlog__markdown-mention">@everyone</span> 
+
+Pueden editar los que ya apostaron.
+
+Cierra 20hs.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968004761867677696 class=chatlog__message-container data-message-id=968004761867677696><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 1:25"><a href=#chatlog__message-container-968004761867677696>25/04/2022 1:25</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>..</span></div></div></div></div><div id=chatlog__message-container-968005022149386321 class=chatlog__message-container data-message-id=968005022149386321><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="lunes, 25 de abril de 2022 1:26">1:26</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>MGA 2 3 BBC
+TDS 1 2 LTA</span> <span class=chatlog__edited-timestamp title="lunes, 25 de abril de 2022 12:14">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968148966640328784 class=chatlog__message-container data-message-id=968148966640328784><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7339f804ecd6a6b82b2e29606f59d047-55988.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,165,0) title=pppp8200 data-user-id=554601414232375296>nuevo</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 10:58"><a href=#chatlog__message-container-968148966640328784>25/04/2022 10:58</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>BBC 2 - 0 MG
+TDS 1 - 0 LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968171355935748177 class=chatlog__message-container data-message-id=968171355935748177><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/91dca3afb003f154907a90e3525df159-5D60A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=martinnnn_ data-user-id=728122526479155201>Martinnnn</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 12:27"><a href=#chatlog__message-container-968171355935748177>25/04/2022 12:27</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>MGA 1-3 BBC
+TDS 0-4 LTA</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=rofl><img class="chatlog__emoji chatlog__emoji--small" alt=🤣 src=../assets_2/1f923-5854E.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div><div class=chatlog__reaction title=LTA><img class="chatlog__emoji chatlog__emoji--small" alt=LTA src=../assets_2/773274874167820298-14847.png loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968235742163796048 class=chatlog__message-container data-message-id=968235742163796048><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/4-4551A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=lucasezc data-user-id=833812181656535130>[EFC/BBC] virtual</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 16:43"><a href=#chatlog__message-container-968235742163796048>25/04/2022 16:43</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>BBC 3 - 0 MG</span></div></div></div></div><div id=chatlog__message-container-968235787571298404 class=chatlog__message-container data-message-id=968235787571298404><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="lunes, 25 de abril de 2022 16:43">16:43</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>TDS 0 - 1 LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968268130998714388 class=chatlog__message-container data-message-id=968268130998714388><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=ssnowwww data-user-id=599013845608038461>Facuuuuuq</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 18:51"><a href=#chatlog__message-container-968268130998714388>25/04/2022 18:51</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>mg 1-0 bbv
+tds 1-3 lta</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968277957363761244 class=chatlog__message-container data-message-id=968277957363761244><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0370765b2d26b0476e087c166fa3fc88-411E9.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=tomy_camino data-user-id=784198529324154921>[tR] TMS</span> <span class=chatlog__timestamp title="lunes, 25 de abril de 2022 19:30"><a href=#chatlog__message-container-968277957363761244>25/04/2022 19:30</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>lta 2 - 0 tds
+MG 0 - 1 BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968987106636607498 class=chatlog__message-container data-message-id=968987106636607498><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 18:28"><a href=#chatlog__message-container-968987106636607498>27/04/2022 18:28</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong><u>Tercer puesto - Copa del Mundo</u></strong>
+
+Massachusetts Gang vs La Ten&#233;s Adentro
+
+<strong><u>Final - Copa del Mundo</u></strong>
+
+Tigres del Sur vs Big Black Cock
+
+Podr&#225;n poner resultado, en caso no pegarle justo se tomar&#225; la apuesta como ganador.
+
+Cierra minutos antes del partido.
+
+<span class="chatlog__markdown-mention">@everyone</span> 
+
+En breve se har&#225; el conteo de la Semis.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968995932056223774 class=chatlog__message-container data-message-id=968995932056223774><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/11bff44cbc4657097fc5e80dcd626c12-96D21.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(65,143,56) title=sisoyyooo data-user-id=421744851164463113>[COCO] Vitinha</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 19:03"><a href=#chatlog__message-container-968995932056223774>27/04/2022 19:03</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>TDS 2 0 BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968999344978145310 class=chatlog__message-container data-message-id=968999344978145310><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 19:17"><a href=#chatlog__message-container-968999344978145310>27/04/2022 19:17</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>TDS 0 -1 BBC
+MGA 0 5 LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-969002554690273351 class=chatlog__message-container data-message-id=969002554690273351><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1-B2132.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=hhrrrrrrrrrrr4118 data-user-id=937891076868562964>hhrrrrrrrrrrr</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 19:30"><a href=#chatlog__message-container-969002554690273351>27/04/2022 19:30</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>TDS 2-1
+MGA 0 5 LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-969005523028574248 class=chatlog__message-container data-message-id=969005523028574248><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/7339f804ecd6a6b82b2e29606f59d047-55988.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,165,0) title=pppp8200 data-user-id=554601414232375296>nuevo</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 19:41"><a href=#chatlog__message-container-969005523028574248>27/04/2022 19:41</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>TDS <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">0</span> - <span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">1 </span> BBC
+MG 0 - 3 LTA</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-969007316521332746 class=chatlog__message-container data-message-id=969007316521332746><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/91dca3afb003f154907a90e3525df159-5D60A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=martinnnn_ data-user-id=728122526479155201>Martinnnn</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 19:49"><a href=#chatlog__message-container-969007316521332746>27/04/2022 19:49</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>MSG 0-5 LTA
+TDS 1-4 BBC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-969010035483103294 class=chatlog__message-container data-message-id=969010035483103294><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0-EB806.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=__sbz data-user-id=756585117417209987>sbz</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 19:59"><a href=#chatlog__message-container-969010035483103294>27/04/2022 19:59</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>tds 20 - 30 bbc</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-969011151847436348 class=chatlog__message-container data-message-id=969011151847436348><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/3-FB033.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title="Deleted User" data-user-id=456226577798135808>Deleted User</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 20:04"><a href=#chatlog__message-container-969011151847436348>27/04/2022 20:04</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>TDS 2-1 BBC</strong>
+
+<strong>MG 0-4 LTA</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-969020971048644618 class=chatlog__message-container data-message-id=969020971048644618><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=ssnowwww data-user-id=599013845608038461>Facuuuuuq</span> <span class=chatlog__timestamp title="miércoles, 27 de abril de 2022 20:43"><a href=#chatlog__message-container-969020971048644618>27/04/2022 20:43</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>tds 3-1 bbc
+mg 1-0 lta</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-973990624455983156 class=chatlog__message-container data-message-id=973990624455983156><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 13:51"><a href=#chatlog__message-container-973990624455983156>11/05/2022 13:51</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Se abren las apuestas!!
+
+<strong>Primera Divisi&#243;n - Fecha 1</strong>
+
+JBA vs TDH
+LTA vs SBC
+RF vs TDS
+Hi vs VL
+
+<strong>Segunda Divisi&#243;n - Fecha 1</strong>
+
+BBC vs SK
+LRV vs SM
+LU vs MG
+ACM vs TyP
+
+Podr&#225;n poner resultado, Local, Empate o Visitante.
+
+Recordar que en caso de pegarle al resultado se sumar&#225;n 1.000.000 de ahacoins.
+
+Mucha suerte!
+
+Cierra minutos antes del primer partido.
+
+Divisi&#243;n C no participa en esta apuesta.
+
+<span class="chatlog__markdown-mention">@everyone</span> 
+
+PD: en breve se dar&#225;n los premios de la final de la copa del mundo.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-973992436944748616 class=chatlog__message-container data-message-id=973992436944748616><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0-EB806.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=__sbz data-user-id=756585117417209987>sbz</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 13:58"><a href=#chatlog__message-container-973992436944748616>11/05/2022 13:58</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>tdh
+lta
+rf
+hi
+
+bbc
+sm
+mg
+typ</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-973996201622007888 class=chatlog__message-container data-message-id=973996201622007888><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 14:13"><a href=#chatlog__message-container-973996201622007888>11/05/2022 14:13</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>JBA 1-3 TDH
+LTA 5-0 SBC
+RF 4-1 TDS
+HI 3-1 VEL
+
+BBC 5-0 SOK
+LRV 3-0 SM
+LU 5-0 MG
+ACM 2-3 TYP</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-973997794023071745 class=chatlog__message-container data-message-id=973997794023071745><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/3-FB033.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title="Deleted User" data-user-id=456226577798135808>Deleted User</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 14:19"><a href=#chatlog__message-container-973997794023071745>11/05/2022 14:19</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>JBA
+SBC
+RF
+VL
+
+BBC
+LRV
+LU
+TYP</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974003114891968542 class=chatlog__message-container data-message-id=974003114891968542><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/11bff44cbc4657097fc5e80dcd626c12-96D21.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(65,143,56) title=sisoyyooo data-user-id=421744851164463113>[COCO] Vitinha</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 14:40"><a href=#chatlog__message-container-974003114891968542>11/05/2022 14:40</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Primera Divisi&#243;n - Fecha 1
+
+JBA vs TDH V
+LTA vs SBC L
+RF vs TDS E
+Hi vs VL V
+
+Segunda Divisi&#243;n - Fecha 1
+
+BBC vs SK E
+LRV vs SM V
+LU vs MG V
+ACM vs TyP V</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974018049067868160 class=chatlog__message-container data-message-id=974018049067868160><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0370765b2d26b0476e087c166fa3fc88-411E9.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=tomy_camino data-user-id=784198529324154921>[tR] TMS</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 15:39"><a href=#chatlog__message-container-974018049067868160>11/05/2022 15:39</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>JBA
+LTA
+RF - TDS (E)
+HI
+
+BBC
+SM
+MG
+TYP</span> <span class=chatlog__edited-timestamp title="miércoles, 11 de mayo de 2022 15:41">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974029032100364299 class=chatlog__message-container data-message-id=974029032100364299><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/a289b8924b9dca40a794347705f05559-ADDC4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(194,124,14) title=facuds data-user-id=457572165164990467>Facu</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 16:23"><a href=#chatlog__message-container-974029032100364299>11/05/2022 16:23</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Primera Divisi&#243;n - Fecha 1
+
+JBA vs TDH -----&gt; Empate
+LTA vs SBC -----&gt; LTA
+RF vs TDS -----&gt; Empate (0-0)
+Hi vs VL -----&gt; Hi
+
+Segunda Divisi&#243;n - Fecha 1
+
+BBC vs SK -----&gt; BBC
+LRV vs SM -----&gt; Empate
+LU vs MG -----&gt; MG
+ACM vs TyP -----&gt; TyP</span> <span class=chatlog__edited-timestamp title="miércoles, 11 de mayo de 2022 16:25">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974030021121433620 class=chatlog__message-container data-message-id=974030021121433620><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(230,126,34) title=suares12 data-user-id=379346390557523968>Lazan</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 16:27"><a href=#chatlog__message-container-974030021121433620>11/05/2022 16:27</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>JBA vs. TDH &gt; Empate.
+LTA vs SBC &gt; 5 - 0. 
+RF vs. TDS &gt; 1 - 1. 
+Hi vs. VL &gt; Hi 
+
+BBC vs. SK &gt; BBC 
+LRV vs. SM &gt; SM 
+LU vs. MG &gt; MG 
+ACM vs. TyP &gt; 1 - 3</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974048481687777290 class=chatlog__message-container data-message-id=974048481687777290><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/a_c8a046d4976f04761a9b60ed9f81aecc-AC96A.gif alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=jere3969 data-user-id=692269260763824148>[EFC/DH] jere</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 17:40"><a href=#chatlog__message-container-974048481687777290>11/05/2022 17:40</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>tdh
+lta
+rf
+hi
+
+bbc
+sm
+mg
+typ</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974073604704706560 class=chatlog__message-container data-message-id=974073604704706560><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/2-ADBB4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(6,66,230) title=lec2979 data-user-id=492574422264446977>[EU] Lec</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 19:20"><a href=#chatlog__message-container-974073604704706560>11/05/2022 19:20</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Primera Divisi&#243;n - Fecha 1
+
+JBA vs TDH V
+LTA vs SBC E 
+RF vs TDS E (0 a 0)
+Hi vs VL V (1-2)
+
+Segunda Divisi&#243;n - Fecha 1
+
+BBC vs SK E (0 a 0)
+LRV vs SM V
+LU vs MG V (0-5)
+ACM vs TyP V (0-5)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974116664029380639 class=chatlog__message-container data-message-id=974116664029380639><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/263fc2a42b4f8b4507b4166b3b499f29-4E98A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=jjotape7 data-user-id=514657020196945921>DROGBA</span> <span class=chatlog__timestamp title="miércoles, 11 de mayo de 2022 22:11"><a href=#chatlog__message-container-974116664029380639>11/05/2022 22:11</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Jba 
+Lta 5-0
+Tds 
+Hi
+
+Bbc 
+Sm 
+Mg 
+Typ 5-0</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974457091446149160 class=chatlog__message-container data-message-id=974457091446149160><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0-EB806.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=nico167163 data-user-id=430907020347047939>Mourinho</span> <span class=chatlog__timestamp title="jueves, 12 de mayo de 2022 20:44"><a href=#chatlog__message-container-974457091446149160>12/05/2022 20:44</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Primera Divisi&#243;n - Fecha 1
+
+JBA vs TDH L
+LTA vs SBC L
+RF vs TDS L
+Hi vs VL L
+
+Segunda Divisi&#243;n - Fecha 1
+
+BBC vs SK L
+LRV vs SM L
+LU vs MG L
+ACM vs TyP V</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976065072730366024 class=chatlog__message-container data-message-id=976065072730366024><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 7:14"><a href=#chatlog__message-container-976065072730366024>17/05/2022 7:14</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong><u>Prode - Primera Divisi&#243;n - Fecha 3</u></strong>
+
+La Tenes Adentro vs Hist&#243;ricos
+Ricardo Fort vs Titanes del Haxball
+Tigres del Sur vs Sanbri Club
+Juego Bonito Argentina vs Velez
+
+<strong><u>Prode - Segunda Divisi&#243;n - Fecha 2</u></strong>
+
+AC Milanesa vs Big Black Cock
+Sokker vs La R Vivimos
+Samurai vs Leeds United
+Toco y Paso vs Massachusetts Gang
+
+<strong><u>Prode - Tercera Divisi&#243;n - Fecha 2</u></strong>
+
+All*Stars vs Burkina Faso
+Ye vs Deportivo Mac Allister 
+KF Lepenci vs Estudiantes
+Yu Yu Hakusco vs Fan&#225;tico
+
+• En caso de haber jugado un partido antes de la apuesta, este no cuenta.
+• Recordar que podr&#225;n poner resultado, equipo ganador o empate. (Pegar el resultado se agrega 1.000.000)
+
+Cierra minutos antes del primer partido.
+
+El staff de <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="AHA2"
+    title="AHA2"
+    src="../assets_2/852030945330724894-1AF0F.png"> les desea mucha suerte!
+
+<span class="chatlog__markdown-mention">@everyone</span></span> <span class=chatlog__edited-timestamp title="martes, 17 de mayo de 2022 14:31">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976112014369902654 class=chatlog__message-container data-message-id=976112014369902654><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/f8b117373cbc14e441029e9897ed420b-517CA.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=rodr1cs data-user-id=724452937396518952>[tR] tictac</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 10:20"><a href=#chatlog__message-container-976112014369902654>17/05/2022 10:20</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>ACM 0-1 BBC
+SK 2-1 LRV
+SM 3-0 LU
+TyP 3-2 MG
+
+A*S 5-0 BHFC
+Ye 2-1 DMA
+KF Lepenci 0-3 EST
+YYH 0-4 FNC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976123263866515497 class=chatlog__message-container data-message-id=976123263866515497><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/b10ab9e2589dc2db3b01c6d54d65b6d6-71E55.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(241,196,15) title=birkirmarsaevarsson data-user-id=837206287422980116>[AdC] Birkir</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 11:05"><a href=#chatlog__message-container-976123263866515497>17/05/2022 11:05</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>HI 3-1 JBA
+TDH 1-1 LTA
+SBC 0-5 RF
+VEL 0-1 TDS
+
+ACM 0-2 BBC
+SK 0-3 LRV
+SM 1-4 LU
+TYP 5-0 MGA
+
+AS 2-1 BFA
+YE 5-0 DMA
+LK 1-2 EST
+YYH 0-5 FNC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976146139688599612 class=chatlog__message-container data-message-id=976146139688599612><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/1df2ab367b01d426eed57986edb8fe12-233E0.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=hasekvra data-user-id=649339953561600007>tsu</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 12:36"><a href=#chatlog__message-container-976146139688599612>17/05/2022 12:36</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>HI 3-1 JBA
+TDH 0-3 LTA
+SBC 0-5 RF
+VEL 1-2 TDS
+
+ACM 0-2 BBC
+SK 0-1 LRV
+SM 2-2 LU
+TYP 3-1 MGA
+
+AS 2-0 BFHC
+YE 5-0 DMA
+LK 1-2 EST
+YYH 0-5 FNC</span> <span class=chatlog__edited-timestamp title="martes, 17 de mayo de 2022 12:36">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976148592161079346 class=chatlog__message-container data-message-id=976148592161079346><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/11bff44cbc4657097fc5e80dcd626c12-96D21.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(65,143,56) title=sisoyyooo data-user-id=421744851164463113>[COCO] Vitinha</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 12:46"><a href=#chatlog__message-container-976148592161079346>17/05/2022 12:46</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>ACM 0-1 BBC
+SK 3-1 LRV
+SM 1-1 LU
+TyP 3-1 MG
+
+A*S 5-0 BHFC
+Ye 5-0 DMA
+KF Lepenci 0-3 EST
+YYH 1-6 FNC</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976149922921455626 class=chatlog__message-container data-message-id=976149922921455626><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/91dca3afb003f154907a90e3525df159-5D60A.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=martinnnn_ data-user-id=728122526479155201>Martinnnn</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 12:51"><a href=#chatlog__message-container-976149922921455626>17/05/2022 12:51</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Historicos 1-1 JBA
+TDH 1-3 LTA
+SC 0-4 RF
+V&#233;lez 2-1 TDS
+
+AC M 2-0 BBC
+Sokker 1-2 LRV
+Samurai 3-3 LU
+TyP 1-4 MSG
+
+All Stars 1-2 BF
+Ye 0-2 DMA
+KFL 1-3 Estudiantes
+YuYu 1-1 Fan&#225;tico</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976175138682851359 class=chatlog__message-container data-message-id=976175138682851359><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/d0aa57f0eb20f013ba5980d98471adae-13F6C.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sebatolosa5327 data-user-id=586746715349057537>SebaTolosa</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 14:31"><a href=#chatlog__message-container-976175138682851359>17/05/2022 14:31</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Se actualiza la fecha 3 de primera divisi&#243;n <span class="chatlog__markdown-mention">@everyone</span> 
+No cuenta fecha 2, pueden editar la apuesta.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976225603105730610 class=chatlog__message-container data-message-id=976225603105730610><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/0370765b2d26b0476e087c166fa3fc88-411E9.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(231,76,60) title=tomy_camino data-user-id=784198529324154921>[tR] TMS</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 17:52"><a href=#chatlog__message-container-976225603105730610>17/05/2022 17:52</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>LTA
+RF
+TDS
+JBA
+
+ACM
+SK
+SM
+TYP
+
+allstar
+ye
+est
+fnc</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-976227285436874772 class=chatlog__message-container data-message-id=976227285436874772><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=../assets_2/a289b8924b9dca40a794347705f05559-ADDC4.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(194,124,14) title=facuds data-user-id=457572165164990467>Facu</span> <span class=chatlog__timestamp title="martes, 17 de mayo de 2022 17:58"><a href=#chatlog__message-container-976227285436874772>17/05/2022 17:58</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Prode - Primera Divisi&#243;n - Fecha 3
+
+La Tenes Adentro vs Hist&#243;ricos --- LTA
+Ricardo Fort vs Titanes del Haxball --- RF
+Tigres del Sur vs Sanbri Club --- TDS
+Juego Bonito Argentina vs Velez --- VL
+
+Prode - Segunda Divisi&#243;n - Fecha 2
+
+AC Milanesa vs Big Black Cock --- BBC
+Sokker vs La R Vivimos --- Empate
+Samurai vs Leeds United --- SM
+Toco y Paso vs Massachusetts Gang --- TyP
+
+Prode - Tercera Divisi&#243;n - Fecha 2
+
+All*Stars vs Burkina Faso --- All Stars
+Ye vs Deportivo Mac Allister --- Ye
+KF Lepenci vs Estudiantes --- EST
+Yu Yu Hakusco vs Fan&#225;tico --- FNC</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 80 message(s)</div><div class=postamble__entry>Timezone: UTC-3</div></div>
