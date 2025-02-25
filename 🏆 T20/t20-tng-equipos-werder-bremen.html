@@ -1,0 +1,1331 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AHA BIG - Asociaci&#243;n de HaxBall Argentino Big - werder-bremen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="../assets_t20-t24/d783ef0554f2a9a3d43716acbabfba5f.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">AHA BIG - Asociaci&#243;n de HaxBall Argentino Big</div>
+        <div class="preamble__entry">✨ TORNEO NUEVAS GENERACIONES / werder-bremen</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="tomy g#8665" data-user-id="693191730614501406" style="">Tomy 10</span>
+
+
+        <span class="chatlog__timestamp">02-May-20 02:36 AM</span>
+
+            <div class="chatlog__message " data-message-id="706016228971380736" id="message-706016228971380736">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/4a84ec1d4d70c1b3a5def17ba6f0cd2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Magui ᴄᴏʀᴄᴇɪʀᴏ &#128525;#8162" data-user-id="421744851164463113" style="color: rgb(181,232,28)">[ATT] Aouar</span>
+
+
+        <span class="chatlog__timestamp">02-May-20 05:20 AM</span>
+
+            <div class="chatlog__message " data-message-id="706057489644257353" id="message-706057489644257353">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmi </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/1c053fc96f099228fe47ad3f08d66c58.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pAtito#4004" data-user-id="427318193955012609" style="color: rgb(70,165,110)">[DH] PAtito</span>
+
+
+        <span class="chatlog__timestamp">04-May-20 09:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="707019463605747752" id="message-707019463605747752">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/83dceeaa29eed3b6411e2f304319328d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="juaanpi98#9532" data-user-id="692184420953620550" style="">Shampi</span>
+
+
+        <span class="chatlog__timestamp">05-May-20 09:59 AM</span>
+
+            <div class="chatlog__message " data-message-id="707214912786661417" id="message-707214912786661417">
+                <div class="chatlog__content">
+                    <div class="markdown">SHAMPI ZK </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/3.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="BARISONE#0713" data-user-id="645755395222142986" style="">Barisone</span>
+
+
+        <span class="chatlog__timestamp">05-May-20 12:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="707259230310367284" id="message-707259230310367284">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo, Barisone </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Pukki22#5090" data-user-id="692886793216852098" style="">Hachim</span>
+
+
+        <span class="chatlog__timestamp">05-May-20 06:39 PM</span>
+
+            <div class="chatlog__message " data-message-id="707345746747195463" id="message-707345746747195463">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo, hachim </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/3a9c1248f250e08d3972df430ee00350.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Favio#3897" data-user-id="438761281458274335" style="">Favio</span>
+
+
+        <span class="chatlog__timestamp">06-May-20 07:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="707721333559001172" id="message-707721333559001172">
+                <div class="chatlog__content">
+                    <div class="markdown">firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 02:07 AM</span>
+
+            <div class="chatlog__message " data-message-id="707820923033747488" id="message-707820923033747488">
+                <div class="chatlog__content">
+                    <div class="markdown">Cierro firmas
+
+<strong>Jugadores Habilitados</strong>
+
+<span class="mention" title="tomy g#8665">@Tomy 10</span> 
+<span class="mention" title="Magui ᴄᴏʀᴄᴇɪʀᴏ &#128525;#8162">@[ATT] Aouar</span> 
+<span class="mention" title="pAtito#4004">@[DH] PAtito</span> 
+<span class="mention" title="juaanpi98#9532">@Shampi</span> 
+<span class="mention" title="BARISONE#0713">@Barisone</span> 
+<span class="mention" title="Pukki22#5090">@Hachim</span> 
+<span class="mention" title="Favio#3897">@Favio</span> 
+
+<em>Bienvenidos al TNG de la Asociaci&#243;n de Haxball Argentino. 
+&#161;Les deseamos la mejor de las suertes!</em> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/1c053fc96f099228fe47ad3f08d66c58.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pAtito#4004" data-user-id="427318193955012609" style="color: rgb(70,165,110)">[DH] PAtito</span>
+
+
+        <span class="chatlog__timestamp">13-May-20 11:27 PM</span>
+
+            <div class="chatlog__message " data-message-id="710317232760160317" id="message-710317232760160317">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="tomy g#8665">@Tomy 10</span> Nuevo capitan de WB! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/2b49d48c7b9411eb54ee6eefdf2088a4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ISharkBlooDI#7112" data-user-id="192060257940406272" style="color: rgb(241,196,15)">[LTA] ISharkBlooDI</span>
+
+
+        <span class="chatlog__timestamp">21-May-20 02:14 AM</span>
+
+            <div class="chatlog__message " data-message-id="712895988913668147" id="message-712895988913668147">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" style="">@deleted-role</span> <span class="mention">#&#127381;│fichajes</span> <span class="chatlog__edited-timestamp" title="21-May-20 02:14 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/2b49d48c7b9411eb54ee6eefdf2088a4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ISharkBlooDI#7112" data-user-id="192060257940406272" style="color: rgb(241,196,15)">[LTA] ISharkBlooDI</span>
+
+
+        <span class="chatlog__timestamp">23-May-20 12:27 AM</span>
+
+            <div class="chatlog__message " data-message-id="713593842330501162" id="message-713593842330501162">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="pAtito#4004">@[DH] PAtito</span> Tomy abandono el servidor, que va a pasar con WB? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/1c053fc96f099228fe47ad3f08d66c58.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pAtito#4004" data-user-id="427318193955012609" style="color: rgb(70,165,110)">[DH] PAtito</span>
+
+
+        <span class="chatlog__timestamp">23-May-20 12:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="713600793416040469" id="message-713600793416040469">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="ISharkBlooDI#7112">@[LTA] ISharkBlooDI</span> ya no tengo contacto con los wb, por eso ced&#237; capitan&#237;a. Seguramente van a dar de baja el team, pero fijate si podes confirmarlo con alguien que siga formando parte </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/2b49d48c7b9411eb54ee6eefdf2088a4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ISharkBlooDI#7112" data-user-id="192060257940406272" style="color: rgb(241,196,15)">[LTA] ISharkBlooDI</span>
+
+
+        <span class="chatlog__timestamp">23-May-20 01:20 AM</span>
+
+            <div class="chatlog__message " data-message-id="713607151700017172" id="message-713607151700017172">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Magui ᴄᴏʀᴄᴇɪʀᴏ &#128525;#8162">@[ATT] Aouar</span> <span class="mention" title="juaanpi98#9532">@Shampi</span> <span class="mention" title="BARISONE#0713">@Barisone</span> <span class="mention" title="Pukki22#5090">@Hachim</span> <span class="mention" title="Favio#3897">@Favio</span> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="713607191298441299" id="message-713607191298441299">
+                <div class="chatlog__content">
+                    <div class="markdown">Alguno quiere tomar la capitania de WB? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/b3001987ca7f1baca5c11e019c93130d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fito#5129" data-user-id="670295978137354250" style="color: rgb(241,196,15)">[VB] Fito Rinaudo</span>
+
+
+        <span class="chatlog__timestamp">23-May-20 05:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="713844975976185927" id="message-713844975976185927">
+                <div class="chatlog__content">
+                    <div class="markdown">el capit&#225;n es <span class="mention" title="juaanpi98#9532">@Shampi</span>, no se entiende lo q hacen <span class="mention" title="pAtito#4004">@[DH] PAtito</span> <span class="chatlog__edited-timestamp" title="23-May-20 05:05 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">23-May-20 05:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="713849927880409099" id="message-713849927880409099">
+                <div class="chatlog__content">
+                    <div class="markdown">El capit&#225;n es shampi, adem&#225;s de que si hicieron un cambio de capit&#225;n nunca lo acepto Tomy. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/b3001987ca7f1baca5c11e019c93130d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fito#5129" data-user-id="670295978137354250" style="color: rgb(241,196,15)">[VB] Fito Rinaudo</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 07:27 PM</span>
+
+            <div class="chatlog__message " data-message-id="714243260264087632" id="message-714243260264087632">
+                <div class="chatlog__content">
+                    <div class="markdown">todo tuyo <span class="mention" title="ogro#0634">@[EST] Ogro</span> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128139;" title="&#128139;" src="../assets_t20-t24/1f48b.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/0d1539532f59e2b6166dbd6da8c427a5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ogro#0634" data-user-id="585291024721772544" style="color: rgb(230,14,14)">[EST] Ogro</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 10:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="714288830160830474" id="message-714288830160830474">
+                <div class="chatlog__content">
+                    <div class="markdown">Werder Bremen - WB
+
+Pref horaria : 22:45 en adelante. 
+
+Capit&#225;n : ogro fabbiani
+SubCapit&#225;n : Lucas Martinez
+
+Nick : el ogro fabbiani
+Discord : <span class="mention" title="ogro#0634">@[EST] Ogro</span> 
+Condici&#243;n : RdC 
+
+Nick : Lucas Martinez  
+Discord : <span class="mention" title="Lucas Martinez#2757">@Lucas Mart&#237;nez</span> 
+Condici&#243;n : NV
+
+Nick: toom
+Discord : <span class="mention" title="toom10#9204">@[HT] Toom</span> 
+Condici&#243;n : Libre
+
+Nick : shft.
+Discord : <span class="mention" title="Z.#6730">@[Mz] Shaft.</span> 
+Condici&#243;n : Libre 
+
+Nick : P. Pogba
+Discord : <span class="mention" title="P. Pogba#8314">@P.Pogba</span> 
+Condici&#243;n : NV <span class="chatlog__edited-timestamp" title="26-May-20 08:40 PM">(edited)</span></div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/1200px-SV-Werder-Bremen-Logo.png">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/1200px-SV-Werder-Bremen-Logo.png" alt="Attachment">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/3.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Tarek#7753" data-user-id="655151361939341324" style="">FaAKD</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 10:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="714289829004967939" id="message-714289829004967939">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/c385e2f99a87e1d51aef824096d3d927.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="P. Pogba#8314" data-user-id="505258905408897025" style="">P.Pogba</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 10:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="714292415782977666" id="message-714292415782977666">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/5e62a9fbbcc51492baab061059686849.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Z.#6730" data-user-id="276081302619553792" style="color: rgb(181,232,28)">[Mz] Shaft.</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 11:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="714302158333280278" id="message-714302158333280278">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo Shaft. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/5867ae026e4466ada3e25dc65896c40d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Lucas Martinez#2757" data-user-id="467152483030925312" style="">Lucas Mart&#237;nez</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 11:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="714304447886524417" id="message-714304447886524417">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo Lucas Martinez </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/0d1539532f59e2b6166dbd6da8c427a5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ogro#0634" data-user-id="585291024721772544" style="color: rgb(230,14,14)">[EST] Ogro</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 11:39 PM</span>
+
+            <div class="chatlog__message " data-message-id="714306651359936542" id="message-714306651359936542">
+                <div class="chatlog__content">
+                    <div class="markdown">firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="toom10#9204" data-user-id="646807883631296543" style="color: rgb(48,138,255)">[HT] Toom</span>
+
+
+        <span class="chatlog__timestamp">24-May-20 11:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="714306776396202015" id="message-714306776396202015">
+                <div class="chatlog__content">
+                    <div class="markdown">firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">26-May-20 09:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="714994949699010680" id="message-714994949699010680">
+                <div class="chatlog__content">
+                    <div class="markdown">Tengo 6 firmas y 5 jugadores.
+Como arreglamos? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/0d1539532f59e2b6166dbd6da8c427a5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ogro#0634" data-user-id="585291024721772544" style="color: rgb(230,14,14)">[EST] Ogro</span>
+
+
+        <span class="chatlog__timestamp">27-May-20 01:09 AM</span>
+
+            <div class="chatlog__message " data-message-id="715053945134776342" id="message-715053945134776342">
+                <div class="chatlog__content">
+                    <div class="markdown">Recien veo, perd&#243;n, se cancela la de FaAKD, aunque ya lo interpretaron creo. Saludos
+<div class="quote">Tengo 6 firmas y 5 jugadores.
+Como arreglamos?
+</div><span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">27-May-20 01:09 AM</span>
+
+            <div class="chatlog__message " data-message-id="715054069781233765" id="message-715054069781233765">
+                <div class="chatlog__content">
+                    <div class="markdown">Ah dale </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">27-May-20 02:49 AM</span>
+
+            <div class="chatlog__message " data-message-id="715079266965913679" id="message-715079266965913679">
+                <div class="chatlog__content">
+                    <div class="markdown"><img class="emoji " alt="WB" title="WB" src="https://cdn.discordapp.com/emojis/715316194550480939.png">  <strong>Jugadores Habilitados</strong> <img class="emoji " alt="WB" title="WB" src="https://cdn.discordapp.com/emojis/715316194550480939.png"> 
+
+<span class="mention" title="ogro#0634">@[EST] Ogro</span> 
+<span class="mention" title="Lucas Martinez#2757">@Lucas Mart&#237;nez</span> 
+<span class="mention" title="toom10#9204">@[HT] Toom</span> 
+<span class="mention" title="Z.#6730">@[Mz] Shaft.</span> 
+<span class="mention" title="P. Pogba#8314">@P.Pogba</span> 
+
+<img class="emoji " alt="aha" title="aha" src="https://cdn.discordapp.com/emojis/713511789324927046.png"> <em>Asociaci&#243;n de Haxball Argentino</em> <span class="chatlog__edited-timestamp" title="27-May-20 06:48 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/0d1539532f59e2b6166dbd6da8c427a5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ogro#0634" data-user-id="585291024721772544" style="color: rgb(230,14,14)">[EST] Ogro</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-20 03:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="736658881157136414" id="message-736658881157136414">
+                <div class="chatlog__content">
+                    <div class="markdown">Cedo capitan&#237;a a <span class="mention" title="Lucas Martinez#2757">@Lucas Mart&#237;nez</span> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="../assets_t20-t24/1f44d.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/5867ae026e4466ada3e25dc65896c40d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Lucas Martinez#2757" data-user-id="467152483030925312" style="">Lucas Mart&#237;nez</span>
+
+
+        <span class="chatlog__timestamp">25-Jul-20 05:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="736685043908608022" id="message-736685043908608022">
+                <div class="chatlog__content">
+                    <div class="markdown">Confirmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 30 message(s)</div>
+</div>
+
+</body>
+</html>

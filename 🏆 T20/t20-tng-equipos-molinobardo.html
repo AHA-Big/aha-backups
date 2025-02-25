@@ -1,0 +1,1707 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AHA BIG - Asociaci&#243;n de HaxBall Argentino Big - molinobardo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/696901033904963674/d783ef0554f2a9a3d43716acbabfba5f.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">AHA BIG - Asociaci&#243;n de HaxBall Argentino Big</div>
+        <div class="preamble__entry">&#128992; TERCERA DIVISI&#211;N / molinobardo</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">02-May-20 10:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="706319384670502974" id="message-706319384670502974">
+                <div class="chatlog__content">
+                    <div class="markdown">FIRMO FEDUUU </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/429184695050174465/984f660ec1781de45bfafc8f0f146ed4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Il torto Simone#9163" data-user-id="429184695050174465" style="color: rgb(120,219,187)">[MBD] Soldano</span>
+
+
+        <span class="chatlog__timestamp">02-May-20 10:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="706323943652327484" id="message-706323943652327484">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/396376159396560896/6314efb1c654b587970feff10adac061.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Thomas Herrera#3265" data-user-id="396376159396560896" style="color: rgb(120,219,187)">[MBD] Norton</span>
+
+
+        <span class="chatlog__timestamp">02-May-20 11:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="706324503386652672" id="message-706324503386652672">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">03-May-20 01:00 AM</span>
+
+            <div class="chatlog__message " data-message-id="706354445528596520" id="message-706354445528596520">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="boleti123#3671">@boleti123</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">03-May-20 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="706524400295346267" id="message-706524400295346267">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="pasqualeju_#6591">@pasqualeju_</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/444617564589391893/9859999ec073ffe9f10ca27031b8ffa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pasqualeju_#6591" data-user-id="444617564589391893" style="">pasqualeju_</span>
+
+
+        <span class="chatlog__timestamp">05-May-20 03:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="707295483743174776" id="message-707295483743174776">
+                <div class="chatlog__content">
+                    <div class="markdown">desfirmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 02:32 AM</span>
+
+            <div class="chatlog__message " data-message-id="707827130712457227" id="message-707827130712457227">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Fede#0567">@[MBD] psycho</span> Capitan falta la firma de boliviano promedio.
+Y verificar si <span class="mention" title="pasqualeju_#6591">@pasqualeju_</span> va a jugar en el equipo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 02:55 AM</span>
+
+            <div class="chatlog__message " data-message-id="707832846525530153" id="message-707832846525530153">
+                <div class="chatlog__content">
+                    <div class="markdown">hola si, boli la borr&#243; jodiendo </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707832929082146886" id="message-707832929082146886">
+                <div class="chatlog__content">
+                    <div class="markdown">y pido permiso para hacer 2 fichajes m&#225;s ya que tengo 2 jugadores a los que se les rompi&#243; la pc </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707832949134852168" id="message-707832949134852168">
+                <div class="chatlog__content">
+                    <div class="markdown">o 1 fichaje m&#225;s al menos </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707832966637813831" id="message-707832966637813831">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 02:56 AM</span>
+
+            <div class="chatlog__message " data-message-id="707833149018865725" id="message-707833149018865725">
+                <div class="chatlog__content">
+                    <div class="markdown">Ya cerraron los fichajes, hubo un tiempo estimado </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 02:56 AM</span>
+
+            <div class="chatlog__message " data-message-id="707833189049172000" id="message-707833189049172000">
+                <div class="chatlog__content">
+                    <div class="markdown">bueno </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833196728942655" id="message-707833196728942655">
+                <div class="chatlog__content">
+                    <div class="markdown">fue reciente </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833203913785465" id="message-707833203913785465">
+                <div class="chatlog__content">
+                    <div class="markdown">pero est&#225; bien </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833217960509450" id="message-707833217960509450">
+                <div class="chatlog__content">
+                    <div class="markdown">solo jugamos 3 </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833245441589248" id="message-707833245441589248">
+                <div class="chatlog__content">
+                    <div class="markdown">hasta q a 1 por lo menos se le arregle la pc </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833445434392606" id="message-707833445434392606">
+                <div class="chatlog__content">
+                    <div class="markdown">tranquilo que igual hoy nos presentamos <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833483182997565" id="message-707833483182997565">
+                <div class="chatlog__content">
+                    <div class="markdown">ma&#241;ana* </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833485376749618" id="message-707833485376749618">
+                <div class="chatlog__content">
+                    <div class="markdown">je </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 02:58 AM</span>
+
+            <div class="chatlog__message " data-message-id="707833663890391091" id="message-707833663890391091">
+                <div class="chatlog__content">
+                    <div class="markdown">Pero tienen que tener el minimo de 5 jugadores. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 02:58 AM</span>
+
+            <div class="chatlog__message " data-message-id="707833695574294551" id="message-707833695574294551">
+                <div class="chatlog__content">
+                    <div class="markdown">y buen0 </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833740449153085" id="message-707833740449153085">
+                <div class="chatlog__content">
+                    <div class="markdown">tengo 2 a los q se les rompi&#243; la pc </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="707833797831426050" id="message-707833797831426050">
+                <div class="chatlog__content">
+                    <div class="markdown">ah&#237; le digo a Boli que firme </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="nicacho422#0937" data-user-id="692652318608457748" style="">nicacho422</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 03:02 AM</span>
+
+            <div class="chatlog__message " data-message-id="707834628475715668" id="message-707834628475715668">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/444617564589391893/9859999ec073ffe9f10ca27031b8ffa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pasqualeju_#6591" data-user-id="444617564589391893" style="">pasqualeju_</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 01:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="707991646934925382" id="message-707991646934925382">
+                <div class="chatlog__content">
+                    <div class="markdown">firmo de nuevo <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 03:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="708015837646291014" id="message-708015837646291014">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">firmo de nuevo <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span>
+</div><span class="mention" title="pasqualeju_#6591">@pasqualeju_</span> no se como te manejaras en otros lugares.
+Pero la pr&#243;xima no quedas habilitado. </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="708016197026709565" id="message-708016197026709565">
+                <div class="chatlog__content">
+                    <div class="markdown">Cierro firmas
+
+<strong>Jugadores Habilitados</strong>
+
+ <span class="mention" title="Fede#0567">@[MBD] psycho</span> 
+ <span class="mention" title="Il torto Simone#9163">@[MBD] Soldano</span> 
+ <span class="mention" title="Thomas Herrera#3265">@[MBD] Norton</span> 
+ <span class="mention" title="pasqualeju_#6591">@pasqualeju_</span> 
+ <span class="mention" title="nicacho422#0937">@nicacho422</span> 
+
+<em>Bienvenidos al TNG de la Asociaci&#243;n de Haxball Argentino. 
+&#161;Les deseamos la mejor de las suertes!</em> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/444617564589391893/9859999ec073ffe9f10ca27031b8ffa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pasqualeju_#6591" data-user-id="444617564589391893" style="">pasqualeju_</span>
+
+
+        <span class="chatlog__timestamp">08-May-20 03:31 AM</span>
+
+            <div class="chatlog__message " data-message-id="708204390913409135" id="message-708204390913409135">
+                <div class="chatlog__content">
+                    <div class="markdown">por qu&#233;? si dije que firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 01:53 AM</span>
+
+            <div class="chatlog__message " data-message-id="710354141611950200" id="message-710354141611950200">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="nicacho422#4223">@[MBD] Boliviano promedio</span> nuevo discord de boliviano ya que perdi&#243; el otro! <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 01:55 AM</span>
+
+            <div class="chatlog__message " data-message-id="710354493165797389" id="message-710354493165797389">
+                <div class="chatlog__content">
+                    <div class="markdown">perfecto, <span class="mention" title="Hard#3216">@Hard</span> te encargas ? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/536005876281114645/6bcec0b9a2f1e5915f8ef995d90f3d92.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Hard#3216" data-user-id="536005876281114645" style="color: rgb(241,196,15)">Hard</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 02:12 AM</span>
+
+            <div class="chatlog__message " data-message-id="710358816310689824" id="message-710358816310689824">
+                <div class="chatlog__content">
+                    <div class="markdown">Que firme con el nuevo discord y le coloco el rol y el apodo. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 02:13 AM</span>
+
+            <div class="chatlog__message " data-message-id="710359132368273408" id="message-710359132368273408">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="nicacho422#4223">@[MBD] Boliviano promedio</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/404144147084083201/620c7e54d435041395194c4809767ab4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="nicacho422#4223" data-user-id="404144147084083201" style="color: rgb(120,219,187)">[MBD] Boliviano promedio</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 02:13 AM</span>
+
+            <div class="chatlog__message " data-message-id="710359168946667581" id="message-710359168946667581">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 02:13 AM</span>
+
+            <div class="chatlog__message " data-message-id="710359175644971029" id="message-710359175644971029">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Hard#3216">@Hard</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/536005876281114645/6bcec0b9a2f1e5915f8ef995d90f3d92.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Hard#3216" data-user-id="536005876281114645" style="color: rgb(241,196,15)">Hard</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 02:15 AM</span>
+
+            <div class="chatlog__message " data-message-id="710359704706220062" id="message-710359704706220062">
+                <div class="chatlog__content">
+                    <div class="markdown">Listo. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/192060257940406272/2b49d48c7b9411eb54ee6eefdf2088a4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ISharkBlooDI#7112" data-user-id="192060257940406272" style="color: rgb(241,196,15)">[LTA] ISharkBlooDI</span>
+
+
+        <span class="chatlog__timestamp">21-May-20 02:17 AM</span>
+
+            <div class="chatlog__message " data-message-id="712896799303794729" id="message-712896799303794729">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" style="color: rgb(120, 219, 187); background-color: rgba(120, 219, 187, 0.1);">@MBD</span> <span class="mention">#&#127381;│fichajes</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">25-May-20 04:03 AM</span>
+
+            <div class="chatlog__message " data-message-id="714372955328610344" id="message-714372955328610344">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" style="color: rgb(120, 219, 187); background-color: rgba(120, 219, 187, 0.1);">@MBD</span> me falta la planilla de mbd les quedan 2 d&#237;as. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">26-May-20 12:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="714859985435099146" id="message-714859985435099146">
+                <div class="chatlog__content">
+                    <div class="markdown">Molinobardo
+Cap: psycho <span class="mention" title="Fede#0567">@[MBD] psycho</span> [MBD] 
+Preferencia horaria: 21-22:00
+Planilla:
+
+Soldano <span class="mention" title="Il torto Simone#9163">@[MBD] Soldano</span> 
+Norton <span class="mention" title="Thomas Herrera#3265">@[MBD] Norton</span> 
+Ryze <span class="mention" title="pasqualeju_#6591">@pasqualeju_</span> 
+Boliviano Promedio <span class="mention" title="nicacho422#4223">@[MBD] Boliviano promedio</span> 
+
+altas:
+Terep&#237;n <span class="mention" title="maxiiimt#6542">@[MBD] Terep&#237;n</span> <span class="chatlog__edited-timestamp" title="26-May-20 12:22 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="714860198401146942" id="message-714860198401146942">
+                <div class="chatlog__content">
+                    <div class="markdown">firmo psycho </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="714861283421454417" id="message-714861283421454417">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="maxiiimt#6542">@[MBD] Terep&#237;n</span> <span class="mention" title="nicacho422#4223">@[MBD] Boliviano promedio</span> <span class="mention" title="pasqualeju_#6591">@pasqualeju_</span> <span class="mention" title="Il torto Simone#9163">@[MBD] Soldano</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/414277423887155200/461c98d7eec8afca775bb7c96a654686.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="maxiiimt#6542" data-user-id="414277423887155200" style="color: rgb(120,219,187)">[MBD] Terep&#237;n</span>
+
+
+        <span class="chatlog__timestamp">26-May-20 12:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="714861329269129217" id="message-714861329269129217">
+                <div class="chatlog__content">
+                    <div class="markdown">Hola </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="714861450279125024" id="message-714861450279125024">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo terep&#237;n. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/429184695050174465/984f660ec1781de45bfafc8f0f146ed4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Il torto Simone#9163" data-user-id="429184695050174465" style="color: rgb(120,219,187)">[MBD] Soldano</span>
+
+
+        <span class="chatlog__timestamp">26-May-20 03:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="714905722961395742" id="message-714905722961395742">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">27-May-20 02:40 AM</span>
+
+            <div class="chatlog__message " data-message-id="715076929962639380" id="message-715076929962639380">
+                <div class="chatlog__content">
+                    <div class="markdown"><img class="emoji " alt="MBD" title="MBD" src="https://cdn.discordapp.com/emojis/715316099092316230.png">  <strong>Jugadores Habilitados</strong> <img class="emoji " alt="MBD" title="MBD" src="https://cdn.discordapp.com/emojis/715316099092316230.png"> 
+
+<span class="mention" title="Fede#0567">@[MBD] psycho</span> 
+<span class="mention" title="maxiiimt#6542">@[MBD] Terep&#237;n</span>
+<span class="mention" title="Il torto Simone#9163">@[MBD] Soldano</span> 
+<span class="mention" title="nicacho422#4223">@[MBD] Boliviano promedio</span> 
+<span class="mention" title="Thomas Herrera#3265">@[MBD] Norton</span> 
+Falta firma de <strong>Ryze</strong>
+
+<img class="emoji " alt="aha" title="aha" src="https://cdn.discordapp.com/emojis/713511789324927046.png"> <em>Asociaci&#243;n de Haxball Argentino</em> <span class="chatlog__edited-timestamp" title="27-May-20 07:47 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/404144147084083201/620c7e54d435041395194c4809767ab4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="nicacho422#4223" data-user-id="404144147084083201" style="color: rgb(120,219,187)">[MBD] Boliviano promedio</span>
+
+
+        <span class="chatlog__timestamp">27-May-20 03:48 AM</span>
+
+            <div class="chatlog__message " data-message-id="715094157408075867" id="message-715094157408075867">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/396376159396560896/6314efb1c654b587970feff10adac061.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Thomas Herrera#3265" data-user-id="396376159396560896" style="color: rgb(120,219,187)">[MBD] Norton</span>
+
+
+        <span class="chatlog__timestamp">27-May-20 07:44 PM</span>
+
+            <div class="chatlog__message " data-message-id="715334768488743007" id="message-715334768488743007">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">28-Jul-20 06:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="737779283463897168" id="message-737779283463897168">
+                <div class="chatlog__content">
+                    <div class="markdown">MBD - Molinobardo 
+Capit&#225;n: psycho
+
+Planilla:
+Norton <span class="mention" title="Thomas Herrera#3265">@[MBD] Norton</span> 
+Boliviano promedio <span class="mention" title="nicacho422#4223">@[MBD] Boliviano promedio</span> 
+Terep&#237;n <span class="mention" title="maxiiimt#6542">@[MBD] Terep&#237;n</span>  
+Soldano <span class="mention" title="Il torto Simone#9163">@[MBD] Soldano</span> 
+psycho <span class="mention" title="Fede#0567">@[MBD] psycho</span> 
+
+Altas:
+Kira <span class="mention" title="Delfi#6367">@[MBD] Kira</span> 
+Condici&#243;n: LIBRE
+cumple <span class="mention" title="Paul Schafer#1816">@[NG] f.cumpleSE</span>  
+Condici&#243;n: LIBRE
+
+ah&#237; actualizo el escudo.
+Preferencia Horaria: 21:30 a 22:30 <span class="chatlog__edited-timestamp" title="06-Aug-20 09:03 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/547238859109433362/3bcbf96b7e1d6590802d25208e54f525.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Delfi#6367" data-user-id="547238859109433362" style="color: rgb(120,219,187)">[MBD] Kira</span>
+
+
+        <span class="chatlog__timestamp">28-Jul-20 06:16 PM</span>
+
+            <div class="chatlog__message " data-message-id="737780494758051910" id="message-737780494758051910">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/586746715349057537/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">28-Jul-20 07:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="737795779611197462" id="message-737795779611197462">
+                <div class="chatlog__content">
+                    <div class="markdown">Lea por favor <span class="mention">#&#127381;│fichajes</span> 
+Le falta un un 75% a esta planilla </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/210487679257804800/a_62f8b5c8066dfdc8b0d14cb9e3417f5a.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fede#0567" data-user-id="210487679257804800" style="color: rgb(120,219,187)">[MBD] psycho</span>
+
+
+        <span class="chatlog__timestamp">28-Jul-20 08:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="737818368891027517" id="message-737818368891027517">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/706314373806948372/737818368484048936/MBD5.png">
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/706314373806948372/737818368484048936/MBD5.png" alt="Attachment">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="737818563133571092" id="message-737818563133571092">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/536005876281114645/6bcec0b9a2f1e5915f8ef995d90f3d92.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Hard#3216" data-user-id="536005876281114645" style="color: rgb(241,196,15)">Hard</span>
+
+
+        <span class="chatlog__timestamp">02-Aug-20 08:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="739450981733105665" id="message-739450981733105665">
+                <div class="chatlog__content">
+                    <div class="markdown"><img class="emoji " alt="MBD" title="MBD" src="https://cdn.discordapp.com/emojis/715316099092316230.png"> <em>JUGADORES HABILITADOS</em> <img class="emoji " alt="MBD" title="MBD" src="https://cdn.discordapp.com/emojis/715316099092316230.png"> 
+
+<span class="mention" title="Fede#0567">@[MBD] psycho</span> &#169;️
+<span class="mention" title="Delfi#6367">@[MBD] Kira</span> 
+<span class="mention" title="nicacho422#4223">@[MBD] Boliviano promedio</span> 
+<span class="mention" title="maxiiimt#6542">@[MBD] Terep&#237;n</span> 
+<span class="mention" title="Il torto Simone#9163">@[MBD] Soldano</span> 
+<span class="mention" title="Thomas Herrera#3265">@[MBD] Norton</span> 
+<em>Resta firmar el jugador: Cumple</em>
+
+<em>&#161;Bienvenidos! ~ 21&#176; Temporada ~ Asociaci&#243;n del Haxball Argentino</em> <img class="emoji " alt="AHA" title="AHA" src="https://cdn.discordapp.com/emojis/726896629747023974.png"> <span class="chatlog__edited-timestamp" title="03-Aug-20 02:33 AM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="MBD" title="MBD" src="https://cdn.discordapp.com/emojis/740748280719474730.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/404144147084083201/620c7e54d435041395194c4809767ab4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="nicacho422#4223" data-user-id="404144147084083201" style="color: rgb(120,219,187)">[MBD] Boliviano promedio</span>
+
+
+        <span class="chatlog__timestamp">02-Aug-20 03:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="739557009157914675" id="message-739557009157914675">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/414277423887155200/461c98d7eec8afca775bb7c96a654686.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="maxiiimt#6542" data-user-id="414277423887155200" style="color: rgb(120,219,187)">[MBD] Terep&#237;n</span>
+
+
+        <span class="chatlog__timestamp">02-Aug-20 08:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="739623593834708992" id="message-739623593834708992">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/429184695050174465/984f660ec1781de45bfafc8f0f146ed4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Il torto Simone#9163" data-user-id="429184695050174465" style="color: rgb(120,219,187)">[MBD] Soldano</span>
+
+
+        <span class="chatlog__timestamp">02-Aug-20 08:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="739624165266686093" id="message-739624165266686093">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/396376159396560896/6314efb1c654b587970feff10adac061.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Thomas Herrera#3265" data-user-id="396376159396560896" style="color: rgb(120,219,187)">[MBD] Norton</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-20 12:59 AM</span>
+
+            <div class="chatlog__message " data-message-id="739694011337539604" id="message-739694011337539604">
+                <div class="chatlog__content">
+                    <div class="markdown">Firmo </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 57 message(s)</div>
+</div>
+
+</body>
+</html>

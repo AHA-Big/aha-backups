@@ -1,0 +1,1635 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AHA BIG - Asociaci&#243;n de HaxBall Argentino Big - &#128203;│fixture-y-horarios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="../assets_t20-t24/d783ef0554f2a9a3d43716acbabfba5f.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">AHA BIG - Asociaci&#243;n de HaxBall Argentino Big</div>
+        <div class="preamble__entry">✨ TORNEO NUEVAS GENERACIONES / &#128203;│fixture-y-horarios</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">07-May-20 01:02 AM</span>
+
+            <div class="chatlog__message " data-message-id="707804413796024331" id="message-707804413796024331">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong>Fixture:</strong> <a href="http://archive.is/epvZx">http://archive.is/epvZx</a>
+
+<u>TNG - Fecha 1 (Viernes 8 de Mayo)</u>
+
+<strong>23:30</strong> Salvame Jebus vs La Doble FF ( <span class="mention" title="TomasCepeda#5278">@[tR] Di Maria</span> ) ( <span class="mention">#etc-partido1</span> )
+<strong>23:00</strong> Leeds United vs Toco y Paso ( <span class="mention" title="sntg#8723">@[ЯF] Yoob</span> ) ( <span class="mention">#etc-partido2</span> )
+<strong>23:30</strong> Feyenoord vs Atletico Mineiro ( <span class="mention" title="gasti.fr#3674">@[Navi] duki</span> ) ( <span class="mention">#etc-partido3</span> )
+<strong>23:00</strong> Pe&#241;arol vs Rabonushka ( <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> ) ( <span class="mention">#etc-partido4</span> )
+<strong>23:30</strong> Rey de Copas vs High Team ( <span class="mention" title="agustin gimenez#0785">@[LVP] number one</span>  ) ( <span class="mention">#etc-partido5</span> )
+<strong>22:30</strong> MolinoBardo vs Mara Salvatrucha ( <span class="mention" title="elm&#225;gico#2003">@[AM] El magico Gonzalez</span> ) ( <span class="mention">#etc-partido6</span> )
+<strong>23:00</strong> Werder Bremen vs Fc Nuremberg ( <span class="mention" title="Kaio#7572">@[TN] kaio</span> ) ( <span class="mention">#etc-partido7</span> )
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala. 
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis.
+* En cada partido hay un canal. En el mismo, ambos equipos, deber&#225;n realizar sus respectivas firmas. 
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> .
+* Los cambios de d&#237;as y horarios pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Para averiguar c&#243;mo firmar, dirigirse a ( <span class="mention">#&#128274;│antidu</span> ).
+* Recomendable usar camisetas.
+
+<strong>Capitanes:</strong> <span class="mention" title="Tade#9240">@Tade</span>  <span class="mention" title="juaanpi98#9532">@Shampi</span>  <span class="mention" title="josesitoracing#8473">@josesitoracing</span>  <span class="mention" title="Green Day#4397">@[HG] Green Day</span> <span class="mention" title="Masche#8733">@[PB] Masche</span> <span class="mention" title="About#1118">@[RN] About</span> <span class="mention" title="la abejita seve#2227">@[AM] Abejita seve</span> <span class="mention" title="f.aamor&#237;n#9973">@[PB] Amorin</span> <span class="mention" title="Fede#0567">@[MBD] psycho</span> <span class="mention" title="Fede#4030">@[TDH] Jones</span> <span class="mention" title="AAAAAAA LISAAAAAAAAAAAA#4138">@[Nice] Kripton</span> <span class="mention" title="Nakz#4226">@[H96] nakz</span> <span class="mention" title="Snoop Dogg#7383">@Snoop Dogg</span> <span class="mention" title="matadorcordobe#7547">@matadorcordobe</span> <span class="chatlog__edited-timestamp" title="08-May-20 11:12 AM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128079;" title="&#128079;" src="../assets_t20-t24/1f44f.png">
+                                <span class="chatlog__reaction-count">6</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">09-May-20 05:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="708784811816517672" id="message-708784811816517672">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong><u>TNG - Fecha 2 (Miercoles 13 de Mayo)</u></strong>
+
+<strong>23:00</strong> La Doble FF vs Toco y Paso ( <span class="mention" title="elm&#225;gico#2003">@[AM] El magico Gonzalez</span> ) ( <span class="mention">#etc-partido1</span> )
+<strong>23:00</strong> Fc Nuremberg vs Leeds United ( <span class="mention" style="color: rgb(162, 162, 162); background-color: rgba(162, 162, 162, 0.1);">@tR</span>  ) ( <span class="mention">#etc-partido2</span> )
+<strong>23:00</strong> Mara Salvatrucha vs Werder Bremen ( <span class="mention" title="Birkir M&#225;r S&#230;varsson#4203">@[GL] Island&#233;s</span> ) ( <span class="mention">#etc-partido3</span> )
+<strong>22:45</strong> High Team vs MolinoBardo ( <span class="mention" title="Frank1#1893">@[JBA] Frank</span> ) ( <span class="mention">#etc-partido4</span> )
+<strong>23:30</strong> Rabonushka vs Rey de Copas ( <span class="mention" title="elm&#225;gico#2003">@[AM] El magico Gonzalez</span> ) ( <span class="mention">#etc-partido5</span> )
+<strong>22:30</strong> Atletico Mineiro vs Pe&#241;arol ( <span class="mention" title="gasti.fr#3674">@[Navi] duki</span> ) ( <span class="mention">#etc-partido6</span> )
+<strong>23:59</strong> Salvame Jebus vs Feyenoord ( <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> ) ( <span class="mention">#etc-partido7</span> )
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala. 
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis.
+* En cada partido hay un canal. En el mismo, ambos equipos, deber&#225;n realizar sus respectivas firmas. 
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> .
+* Los cambios de d&#237;as y horarios pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Para averiguar c&#243;mo firmar, dirigirse a ( <span class="mention">#&#128274;│antidu</span> ).
+* Recomendable usar camisetas.
+
+ <strong>Capitanes:</strong> <span class="mention" title="Tade#9240">@Tade</span> <span class="mention" title="Fede#0567">@[MBD] psycho</span> <span class="mention" title="Snoop Dogg#7383">@Snoop Dogg</span> <span class="mention" title="matadorcordobe#7547">@matadorcordobe</span> <span class="mention" title="Nakz#4226">@[H96] nakz</span> <span class="mention" title="la abejita seve#2227">@[AM] Abejita seve</span> <span class="mention" title="AAAAAAA LISAAAAAAAAAAAA#4138">@[Nice] Kripton</span> <span class="mention" title="Fede#4030">@[TDH] Jones</span> <span class="mention" title="f.aamor&#237;n#9973">@[PB] Amorin</span> <span class="mention" title="Green Day#4397">@[HG] Green Day</span> <span class="mention" title="About#1118">@[RN] About</span> <span class="mention" title="Masche#8733">@[PB] Masche</span> <span class="mention" title="josesitoracing#8473">@josesitoracing</span> <span class="mention" title="juaanpi98#9532">@Shampi</span> <span class="chatlog__edited-timestamp" title="13-May-20 02:59 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 07:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="710623255630970890" id="message-710623255630970890">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 3 (Viernes 15 de Mayo)</u>
+
+<strong>23:59</strong> Feyenoord - La Doble FF (  ) ( <span class="mention">#etc-partido1</span> )
+ 
+<strong>22:45</strong> MolinoBardo - Rabonushka ( <span class="mention" title="f.aamor&#237;n#9973">@[PB] Amorin</span> ) ( <span class="mention">#partido2</span> )
+
+<strong>23:00</strong> Rey de Copas - Atletico Mineiro ( <span class="mention" title="gasti.fr#3674">@[Navi] duki</span> ) ( <span class="mention">#partido3</span> )
+
+<strong>23:30</strong> Pe&#241;arol - Salvame Jebus ( <span class="mention" title="TomasCepeda#5278">@[tR] Di Maria</span>  ) ( <span class="mention">#etc-partido4</span> )
+ 
+<strong>23:00</strong> Toco y Paso - Fc Nuremberg ( <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> ) ( <span class="mention">#etc-partido5</span> ) 
+ 
+<strong>23:30</strong> Leeds United - Mara Salvatrucha ( <span class="mention" title="elm&#225;gico#2003">@[AM] El magico Gonzalez</span> ) (  <span class="mention">#etc-partido5</span> )
+ 
+<strong>23:00</strong> Werder Bremen - High Team (a voluntad ) ( <span class="mention">#etc-partido7</span> )
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala. 
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis.
+* En cada partido hay un canal. En el mismo, ambos equipos, deber&#225;n realizar sus respectivas firmas. 
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> .
+* Los cambios de d&#237;as y horarios pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Para averiguar c&#243;mo firmar, dirigirse a ( <span class="mention">#&#128274;│antidu</span> ).
+* Recomendable usar camisetas.
+ <span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="15-May-20 02:32 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">17-May-20 02:23 AM</span>
+
+            <div class="chatlog__message " data-message-id="711448710898253824" id="message-711448710898253824">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 4 (Miercoles 20 de Mayo)</u> 
+
+<strong>Ultimo partido de la mitad</strong>
+
+<strong>23:30</strong> Salvame Jebus - Rey de Copas (a voluntad) <span class="mention">#etc-partido1</span> 
+
+<strong>23:15</strong> Feyenoord - Pe&#241;arol (a voluntad) <span class="mention">#partido2</span>  
+
+<strong>22:30</strong> Atletico Mineiro - MolinoBardo ( <span class="mention" title="gasti.fr#3674">@[Navi] duki</span> ) <span class="mention">#partido3</span> 
+ 
+<strong>23:00</strong> Rabonushka - Werder Bremen (a voluntad) <span class="mention">#etc-partido4</span> 
+ 
+<strong>23:30</strong> High Team - Leeds United ( <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> ) <span class="mention">#etc-partido5</span> 
+
+<strong>23:00</strong> Mara Salvatrucha - Toco y Paso ( <span class="mention" title="elm&#225;gico#2003">@[AM] El magico Gonzalez</span> ) <span class="mention">#etc-partido6</span> 
+
+<strong>23:00</strong> La Doble FF - Fc Nuremberg ( <span class="mention" title="Green Day#4397">@[HG] Green Day</span> ) <span class="mention">#etc-partido7</span> 
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala. 
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis.
+* En cada partido hay un canal. En el mismo, ambos equipos, deber&#225;n realizar sus respectivas firmas. 
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> .
+* Los cambios de d&#237;as y horarios pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Para averiguar c&#243;mo firmar, dirigirse a ( <span class="mention">#&#128274;│antidu</span> ).
+* Recomendable usar camisetas.
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="20-May-20 01:40 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">28-May-20 04:46 AM</span>
+
+            <div class="chatlog__message " data-message-id="715471156076871752" id="message-715471156076871752">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 5 (Viernes 29 de Mayo)</u>
+
+<strong>23:00</strong> Pe&#241;arol - La Doble FF ( <span class="mention" title="v9basten#2596">@v9basten</span> ) <span class="mention">#etc-partido1</span> 
+
+<strong>22:45</strong> MolinoBardo - Salvame Jebus ( <span class="mention" title="sntg#8723">@[ЯF] Yoob</span> ) <span class="mention">#partido2</span> 
+ 
+<strong>23:30</strong> Rey de Copas - Feyenoord ( <span class="mention" title="TRAVIS BICKLE#2816">@[TTU] el puma</span> ) <span class="mention">#partido3</span>
+
+<strong>23:00</strong> Werder Bremen - Atletico Mineiro ( <span class="mention" title="u even trying#1111">@[NG] leslie</span> ) <span class="mention">#etc-partido4</span> 
+
+<strong>23:59</strong> Leeds United - Rabonushka ( <span class="mention" title="elm&#225;gico#2003">@[AM] El magico Gonzalez</span> ) <span class="mention">#etc-partido5</span> 
+
+<strong>23:00</strong> Toco y Paso - High Team ( <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> ) <span class="mention">#etc-partido6</span> 
+
+<strong>23:15</strong> Fc Nuremberg - Mara Salvatrucha ( <span class="mention" title="Birkir M&#225;r S&#230;varsson#4203">@[GL] Island&#233;s</span> ) <span class="mention">#partido7</span> 
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> .
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="29-May-20 07:23 PM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="../assets_t20-t24/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/2b49d48c7b9411eb54ee6eefdf2088a4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ISharkBlooDI#7112" data-user-id="192060257940406272" style="color: rgb(241,196,15)">[LTA] ISharkBlooDI</span>
+
+
+        <span class="chatlog__timestamp">30-May-20 03:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="716352789785083965" id="message-716352789785083965">
+                <div class="chatlog__content">
+                    <div class="markdown">Borre sin querer jeje <span class="chatlog__edited-timestamp" title="30-May-20 03:10 PM">(edited)</span></div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fix_TNG.png">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fix_TNG.png" alt="Attachment">
+                            </a>
+                    </div>
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="../assets_t20-t24/1f4af.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">01-Jun-20 07:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="717137514426793984" id="message-717137514426793984">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 6 (Miercoles 3 de Junio)</u>
+
+<strong>23:00</strong> La Doble FF - Mara Salvatrucha (A voluntad) ( <span class="mention">#etc-partido1</span> )
+ 
+<strong>23:59</strong> Salvame Jebus - Werder Bremen ( <span class="mention" title="About#1118">@[RN] About</span> ) ( <span class="mention">#etc-partido2</span> )
+
+<strong>22:30</strong> Feyenoord - MolinoBardo ( <span class="mention" title="elm&#225;gico#2003">@[AM] El magico Gonzalez</span> ) ( <span class="mention">#etc-partido3</span> )
+
+<strong>23:00</strong> Pe&#241;arol - Rey de Copas (A voluntad) ( <span class="mention">#etc-partido4</span> )
+ 
+<strong>23:15</strong> Atletico Mineiro - Leeds United (A voluntad) ( <span class="mention">#etc-partido5</span> )
+
+<strong>23:30</strong> Rabonushka - Toco y Paso ( <span class="mention" title="SebaTolosa#5327">@[EST] Bruja Veron</span> ) ( <span class="mention">#etc-partido6</span> )
+
+<strong>23:00</strong> High Team - Fc Nuremberg (A voluntad) ( <span class="mention">#etc-partido7</span> )
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span>.
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores.
+
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="01-Jun-20 07:17 PM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="../assets_t20-t24/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/2b49d48c7b9411eb54ee6eefdf2088a4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="ISharkBlooDI#7112" data-user-id="192060257940406272" style="color: rgb(241,196,15)">[LTA] ISharkBlooDI</span>
+
+
+        <span class="chatlog__timestamp">01-Jun-20 11:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="717195941152817215" id="message-717195941152817215">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fix_TNG%20%281%29.png">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fix_TNG%20%281%29.png" alt="Attachment">
+                            </a>
+                    </div>
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="1891" title="1891" src="../assets_t20-t24/715315997128523897.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="../assets_t20-t24/1f4af.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="aha" title="aha" src="../assets_t20-t24/713511789324927046.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="FF" title="FF" src="../assets_t20-t24/715316053206630440.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">04-Jun-20 03:28 AM</span>
+
+            <div class="chatlog__message " data-message-id="717988246360948748" id="message-717988246360948748">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 7 ( 5 de Junio)</u>
+
+<strong>23:00</strong> Rey de Copas - La Doble FF (a voluntad) ( <span class="mention">#etc-partido1</span> )
+ 
+<strong>22:30</strong> Mara Salvatrucha - High Team (a voluntad) ( <span class="mention">#etc-partido2</span> )
+
+<strong>23:00</strong> Fc Nuremberg - Rabonushka (a voluntad) ( <span class="mention">#etc-partido3</span> )
+
+<strong>23:30</strong> Leeds United - Salvame Jebus ( <span class="mention" title="About#1118">@[RN] About</span> ) ( <span class="mention">#etc-partido4</span> )
+
+<strong>23:30</strong> Werder Bremen - Feyenoord (a voluntad) ( <span class="mention">#etc-partido5</span> )
+
+<strong>22:15</strong> MolinoBardo - Pe&#241;arol (a voluntad) ( <span class="mention">#etc-partido6</span> )
+ 
+<strong>23:30</strong> Toco y Paso - Atletico Mineiro (a voluntad) ( <span class="mention">#etc-partido7</span> )
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span>.
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores.
+
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="04-Jun-20 03:39 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/a_316ac6c2f47b161b3f279080443cf85c.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pipe#6481" data-user-id="507303103104548877" style="color: rgb(241,196,15)">[LVP] pipe</span>
+
+
+        <span class="chatlog__timestamp">04-Jun-20 01:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="718135163342684200" id="message-718135163342684200">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fecha_7.jpg">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fecha_7.jpg" alt="Attachment">
+                            </a>
+                    </div>
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127468;" title="&#127468;" src="../assets_t20-t24/1f1ec.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127479;" title="&#127479;" src="../assets_t20-t24/1f1f7.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127462;" title="&#127462;" src="../assets_t20-t24/1f1e6.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127464;" title="&#127464;" src="../assets_t20-t24/1f1e8.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127470;" title="&#127470;" src="../assets_t20-t24/1f1ee.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127344;️" title="&#127344;️" src="../assets_t20-t24/1f170.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127480;" title="&#127480;" src="../assets_t20-t24/1f1f8.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127359;️" title="&#127359;️" src="../assets_t20-t24/1f17f.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="1️⃣" title="1️⃣" src="../assets_t20-t24/31-20e3.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127477;" title="&#127477;" src="../assets_t20-t24/1f1f5.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127466;" title="&#127466;" src="../assets_t20-t24/1f1ea.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127481;" title="&#127481;" src="../assets_t20-t24/1f1f9.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127472;" title="&#127472;" src="../assets_t20-t24/1f1f0.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127474;" title="&#127474;" src="../assets_t20-t24/1f1f2.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="FF" title="FF" src="../assets_t20-t24/715316053206630440.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">06-Jun-20 11:00 AM</span>
+
+            <div class="chatlog__message " data-message-id="718826713655672854" id="message-718826713655672854">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 8 ( Miercoles 10 de Junio)</u>
+
+<strong>22:45</strong> La Doble FF - High Team (a voluntad) ( <span class="mention">#etc-partido1</span> )
+
+<strong>23:00</strong> Pe&#241;arol - Werder Bremen (a voluntad) ( <span class="mention">#partido2</span> )
+ 
+<strong>23:59</strong> Feyenoord - Leeds United ( <span class="mention" title="About#1118">@[RN] About</span> ) ( <span class="mention">#partido3</span> )
+
+<strong>23:30</strong> Salvame Jebus - Toco y Paso ( <span class="mention" title="wata#3514">@[RN] wata</span> ) ( <span class="mention">#etc-partido4</span> )
+
+<strong>22:30</strong> Rey de Copas - MolinoBardo (a voluntad) ( <span class="mention">#etc-partido5</span> )
+
+<strong>23:30</strong> Atletico Mineiro - Fc Nuremberg ( <span class="mention" title="Green Day#4397">@[HG] Green Day</span> ) ( <span class="mention">#etc-partido6</span> )
+
+<strong>23:00</strong> Rabonushka - Mara Salvatrucha (a voluntad) ( <span class="mention">#partido7</span> )
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> .
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores.
+
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="10-Jun-20 08:18 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/a_316ac6c2f47b161b3f279080443cf85c.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pipe#6481" data-user-id="507303103104548877" style="color: rgb(241,196,15)">[LVP] pipe</span>
+
+
+        <span class="chatlog__timestamp">06-Jun-20 04:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="718913365979955200" id="message-718913365979955200">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fecha_8.jpg">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fecha_8.jpg" alt="Attachment">
+                            </a>
+                    </div>
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="TyP" title="TyP" src="../assets_t20-t24/715316180574797864.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">11-Jun-20 01:37 AM</span>
+
+            <div class="chatlog__message " data-message-id="720496887974723615" id="message-720496887974723615">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 9 ( Viernes 12 de Junio)</u>
+
+<strong>22:30</strong> MolinoBardo - La Doble FF (a voluntad) ( <span class="mention">#etc-partido1</span> )
+
+<strong>23:30</strong> Fc Nuremberg - Salvame Jebus (a voluntad) ( <span class="mention">#etc-partido2</span> )
+
+<strong>23:00</strong> Toco y Paso - Feyenoord (a voluntad) ( <span class="mention">#etc-partido3</span> )
+
+<strong>23:00</strong> Leeds United - Pe&#241;arol (a voluntad) ( <span class="mention">#etc-partido4</span> )
+
+<strong>23:00</strong> Werder Bremen - Rey de Copas (a voluntad) ( <span class="mention">#etc-partido5</span> )
+
+<strong>22:30</strong> Mara Salvatrucha - Atletico Mineiro (a voluntad) ( <span class="mention">#etc-partido6</span> )
+
+<strong>22:45</strong> High Team - Rabonushka (a voluntad) ( <span class="mention">#etc-partido7</span> )
+
+Puntos a destacar
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span>.
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores.
+
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="11-Jun-20 01:37 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/a_316ac6c2f47b161b3f279080443cf85c.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pipe#6481" data-user-id="507303103104548877" style="color: rgb(241,196,15)">[LVP] pipe</span>
+
+
+        <span class="chatlog__timestamp">11-Jun-20 03:57 AM</span>
+
+            <div class="chatlog__message " data-message-id="720532163216539651" id="message-720532163216539651">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fecha_9.jpg">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fecha_9.jpg" alt="Attachment">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">14-Jun-20 02:11 AM</span>
+
+            <div class="chatlog__message " data-message-id="721592732119990385" id="message-721592732119990385">
+                <div class="chatlog__content">
+                    <div class="markdown"><u>TNG - Fecha 10 ( Miercoles 17 de Junio)</u>
+
+<strong>23:15</strong> Salvame Jebus - Mara Salvatrucha (a voluntad) ( <span class="mention">#etc-partido1</span>) 
+
+<strong>23:59</strong> Feyenoord - Fc Nuremberg (a voluntad) ( <span class="mention">#etc-partido2</span> )
+
+<strong>23:00</strong> La Doble FF - Rabonushka (a voluntad) ( <span class="mention">#etc-partido3</span> )
+
+<strong>22:45</strong> Pe&#241;arol - Toco y Paso (a voluntad) ( <span class="mention">#etc-partido4</span> )
+
+<strong>23:00</strong> Rey de Copas - Leeds United (a voluntad) ( <span class="mention">#etc-partido5</span> )
+
+<strong>22:30</strong>MolinoBardo - Werder Bremen  (a voluntad) ( <span class="mention">#etc-partido6</span> )
+
+<strong>22:30</strong> Atletico Mineiro - High Team (a voluntad) ( <span class="mention">#etc-partido7</span> )
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> .
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores. </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721592758799958067" id="message-721592758799958067">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/a_316ac6c2f47b161b3f279080443cf85c.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pipe#6481" data-user-id="507303103104548877" style="color: rgb(241,196,15)">[LVP] pipe</span>
+
+
+        <span class="chatlog__timestamp">14-Jun-20 03:34 AM</span>
+
+            <div class="chatlog__message " data-message-id="721613539248308345" id="message-721613539248308345">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fecha_10.jpg">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fecha_10.jpg" alt="Attachment">
+                            </a>
+                    </div>
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128525;" title="&#128525;" src="../assets_t20-t24/1f60d.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128523;" title="&#128523;" src="../assets_t20-t24/1f60b.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">18-Jun-20 08:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="723320025305579542" id="message-723320025305579542">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong><u>TNG - Fecha 11 ( Viernes 19 de Junio)</u></strong>
+
+<strong>23:00</strong> Werder Bremen - La Doble FF (a voluntad) <span class="mention">#etc-partido1</span> 
+
+<strong>23:00</strong> High Team - Salvame Jebus (a voluntad) <span class="mention">#etc-partido2</span> 
+
+<strong>23:30</strong> Mara Salvatrucha - Feyenoord (a voluntad) <span class="mention">#etc-partido3</span> 
+
+<strong>22:45</strong> Fc Nuremberg - Pe&#241;arol (a voluntad) <span class="mention">#etc-partido4</span> 
+
+<strong>23:30</strong> Toco y Paso - Rey de Copas (a voluntad) <span class="mention">#etc-partido5</span> 
+
+<strong>22:30</strong> Leeds United - MolinoBardo (a voluntad) <span class="mention">#etc-partido6</span> 
+
+<strong>23:30</strong> Rabonushka - Atletico Mineiro (a voluntad) <span class="mention">#etc-partido7</span> 
+
+Puntos a destacar
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> 
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores.
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="18-Jun-20 08:45 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/a_316ac6c2f47b161b3f279080443cf85c.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pipe#6481" data-user-id="507303103104548877" style="color: rgb(241,196,15)">[LVP] pipe</span>
+
+
+        <span class="chatlog__timestamp">19-Jun-20 03:06 AM</span>
+
+            <div class="chatlog__message " data-message-id="723418357101101096" id="message-723418357101101096">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fecha_11.jpg">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fecha_11.jpg" alt="Attachment">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/d0a64d242cca310167ccbea9856d7ea8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="SebaTolosa#5327" data-user-id="586746715349057537" style="color: rgb(241,196,15)">[EST] Bruja Veron</span>
+
+
+        <span class="chatlog__timestamp">23-Jun-20 05:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="725092495179907102" id="message-725092495179907102">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong><u>TNG - Fecha 12 ( Miercoles 24 de Junio)</u></strong>
+
+<strong>23:30</strong> Salvame Jebus - Rabonushka (a voluntad) <span class="mention">#etc-partido1</span> 
+
+<strong>23:15</strong> Feyenoord - High Team (a voluntad) <span class="mention">#etc-partido2</span> 
+
+<strong>23:00</strong> La Doble FF - Atletico Mineiro (a voluntad) <span class="mention">#etc-partido3</span> 
+
+<strong>22:30</strong> Pe&#241;arol - Mara Salvatrucha (a voluntad) <span class="mention">#etc-partido4</span> 
+
+<strong>23:00</strong> Rey de Copas - Fc Nuremberg (a voluntad) <span class="mention">#etc-partido5</span> 
+
+<strong>21:00</strong> MolinoBardo - Toco y Paso (a voluntad) <span class="mention">#etc-partido6</span> 
+
+<strong>22:30</strong> Werder Bremen -Leeds United (a voluntad) <span class="mention">#etc-partido7</span> 
+
+<strong>Puntos a destacar</strong>
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> 
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores. </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="725093599913705492" id="message-725093599913705492">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong><u>TNG - Fecha 13 ( Viernes 26 de Junio) Ultima Fecha TNG</u></strong>
+
+<strong>23:59</strong> Leeds United - La Doble FF (a voluntad) <span class="mention">#etc-partido1</span> 
+
+<strong>23:30</strong> Atletico Mineiro - Salvame Jebus (a voluntad) <span class="mention">#etc-partido2</span> 
+ 
+<strong>23:59</strong> Rabonushka - Feyenoord (a voluntad) <span class="mention">#etc-partido3</span> 
+
+<strong>22:30</strong> High Team - Pe&#241;arol (a voluntad) <span class="mention">#etc-partido4</span> 
+
+<strong>23:00</strong> Mara Salvatrucha - Rey de Copas (a voluntad) <span class="mention">#etc-partido5</span> 
+
+<strong>22:30</strong> Fc Nuremberg - MolinoBardo (a voluntad) <span class="mention">#etc-partido6</span> 
+
+<strong>22:30</strong> Toco y Paso - Werder Bremen (a voluntad) <span class="mention">#etc-partido7</span> 
+
+Puntos a destacar
+* El equipo de la izquierda ser&#225; el local y encargado de la creaci&#243;n de la sala.
+* Recuerden que a partir de la segunda mitad se estar&#225; utilizando el nuevo sistema AntiDU.
+* Para averiguar c&#243;mo firmar, dirigirse a <span class="mention">#&#128274;│antidu</span>.
+* Los &#225;rbitros ser&#225;n los jugadores o equipos que figuran entre par&#233;ntesis. Deber&#225;n verificar las firmas en el canal indicado junto a cada partido.
+* El partido finaliza a los 10 minutos, sin overtime.
+* El cambio de d&#237;a y horario de un partido tendr&#225; que ser pactado entre capitanes y anunciado, con la confirmaci&#243;n de ambos, en <span class="mention">#⏱│cambios-de-horario</span> 
+* Los cambios de d&#237;as pueden ser s&#243;lo hasta antes de la pr&#243;xima fecha.
+* Recomendable usar camisetas.
+* Leer en <span class="mention">#&#128683;│sanciones</span> sobre algun caso de sancion en jugadores.
+<span class="mention" style="color: rgb(26, 188, 156); background-color: rgba(26, 188, 156, 0.1);">@&#128304; Capitanes TNG</span> <span class="chatlog__edited-timestamp" title="23-Jun-20 06:03 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/a_316ac6c2f47b161b3f279080443cf85c.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="pipe#6481" data-user-id="507303103104548877" style="color: rgb(241,196,15)">[LVP] pipe</span>
+
+
+        <span class="chatlog__timestamp">24-Jun-20 11:40 AM</span>
+
+            <div class="chatlog__message " data-message-id="725359753794158643" id="message-725359753794158643">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fecha_12.png">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fecha_12.png" alt="Attachment">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="725359770705461308" id="message-725359770705461308">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="../assets_t20-t24/Fecha_13.png">
+                                    <img class="chatlog__attachment-thumbnail" src="../assets_t20-t24/Fecha_13.png" alt="Attachment">
+                            </a>
+                    </div>
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/b3001987ca7f1baca5c11e019c93130d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fito#5129" data-user-id="670295978137354250" style="color: rgb(241,196,15)">[VB] Fito Rinaudo</span>
+
+
+        <span class="chatlog__timestamp">24-Jun-20 09:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="725505008082354177" id="message-725505008082354177">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong>AVISO:</strong> Se suspende el partido entre <span class="mention" style="">@deleted-role</span> y <span class="mention" style="">@deleted-role</span>. Explicaremos el motivo en un  futuro comunicado. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="LVP" title="LVP" src="../assets_t20-t24/714999431287668776.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="EST" title="EST" src="../assets_t20-t24/715315790928281610.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128561;" title="&#128561;" src="../assets_t20-t24/1f631.png">
+                                <span class="chatlog__reaction-count">6</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="../assets_t20-t24/b3001987ca7f1baca5c11e019c93130d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Fito#5129" data-user-id="670295978137354250" style="color: rgb(241,196,15)">[VB] Fito Rinaudo</span>
+
+
+        <span class="chatlog__timestamp">26-Jun-20 08:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="726218367178113044" id="message-726218367178113044">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong>NUEVO AVISO:</strong> Tambi&#233;n se suspende el partido entre <span class="mention" style="">@deleted-role</span> y <span class="mention" style="">@deleted-role</span>. Explicaremos el motivo en un  futuro comunicado. El motivo ya est&#225; subido en <span class="mention">#&#128220;│resoluciones</span> <span class="chatlog__edited-timestamp" title="26-Jun-20 08:32 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="postamble">
+    <div class="postamble__entry">Exported 25 message(s)</div>
+</div>
+
+</body>
+</html>
